@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EXE201_EunDeParfum")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d6cbac70f18588de0317137b40d58a22d42d318")]
 [assembly: System.Reflection.AssemblyProductAttribute("EXE201_EunDeParfum")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EXE201_EunDeParfum")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
