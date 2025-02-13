@@ -77,10 +77,10 @@ namespace EunDeParfum_Repository.DbContexts
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<UserAnswer>()
-        .HasOne(ua => ua.Question)
-        .WithMany()
-        .HasForeignKey(ua => ua.QuestionId)
-        .OnDelete(DeleteBehavior.Restrict); // Tránh lỗi CASCADE DELETE
+                .HasOne(ua => ua.Question)
+                .WithMany()
+                .HasForeignKey(ua => ua.QuestionId)
+                .OnDelete(DeleteBehavior.Restrict); // Tránh lỗi CASCADE DELETE
 
             modelBuilder.Entity<UserAnswer>()
                 .HasOne(ua => ua.Answer)
@@ -92,7 +92,7 @@ namespace EunDeParfum_Repository.DbContexts
                 .HasOne(ua => ua.User)
                 .WithMany()
                 .HasForeignKey(ua => ua.UserId)
-                .OnDelete(DeleteBehavior.Restrict); // Chỉ giữ CASCADE DELETE trên User
+                .OnDelete(DeleteBehavior.Cascade); // Chỉ giữ CASCADE DELETE trên User
         }
     }
 }
