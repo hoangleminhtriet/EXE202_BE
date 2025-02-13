@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\EXE201_EunDeParfum.props" />
+</Project>

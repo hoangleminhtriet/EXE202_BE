@@ -28,6 +28,34 @@ namespace EunDeParfum_Repository.DbContexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<OrderDetail>()
+            .HasOne(od => od.Order)
+            .WithMany(o => o.OrderDetails)
+            .HasForeignKey(od => od.OrderId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+            // Thiết lập quan hệ 1-N giữa Order và Payment
+            modelBuilder.Entity<Payment>()
+                .HasOne(p => p.Order)
+                .WithMany()
+                .HasForeignKey(p => p.OrderId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Thiết lập quan hệ 1-N giữa Product và Reviews
+            modelBuilder.Entity<Review>()
+                .HasOne(r => r.Product)
+                .WithMany()
+                .HasForeignKey(r => r.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Thiết lập quan hệ 1-N giữa Customers và Orders
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.Customer)
+                .WithMany(c => c.Orders)
+                .HasForeignKey(o => o.CustomerId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Thiết lập quan hệ nhiều-nhiều giữa Products và Categories
             modelBuilder.Entity<ProductCategory>()
                 .HasKey(pc => new { pc.ProductId, pc.CategoryId });
 
@@ -40,6 +68,31 @@ namespace EunDeParfum_Repository.DbContexts
                 .HasOne(pc => pc.Category)
                 .WithMany(c => c.ProductCategories)
                 .HasForeignKey(pc => pc.CategoryId);
+
+            // Thiết lập quan hệ giữa Questions và Answers
+            modelBuilder.Entity<Answer>()
+                .HasOne(a => a.Question)
+                .WithMany(q => q.Answers)
+                .HasForeignKey(a => a.QuestionId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<UserAnswer>()
+                .HasOne(ua => ua.Question)
+                .WithMany()
+                .HasForeignKey(ua => ua.QuestionId)
+                .OnDelete(DeleteBehavior.Restrict); // Tránh lỗi CASCADE DELETE
+
+            modelBuilder.Entity<UserAnswer>()
+                .HasOne(ua => ua.Answer)
+                .WithMany()
+                .HasForeignKey(ua => ua.AnswerId)
+                .OnDelete(DeleteBehavior.Restrict); // Ngăn lỗi xung đột
+
+            modelBuilder.Entity<UserAnswer>()
+                .HasOne(ua => ua.User)
+                .WithMany()
+                .HasForeignKey(ua => ua.UserId)
+                .OnDelete(DeleteBehavior.Cascade); // Chỉ giữ CASCADE DELETE trên User
         }
     }
 }

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EXE201_EunDeParfum.props" />
+</Project>
