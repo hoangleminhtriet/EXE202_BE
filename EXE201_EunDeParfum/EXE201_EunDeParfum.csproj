@@ -26,8 +26,4 @@
     <ProjectReference Include="..\EunDeParfum_Service\EunDeParfum_Service.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

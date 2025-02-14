@@ -85,3 +85,14 @@ D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\obj\Debug\net6.0\re
 D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\obj\Debug\net6.0\EXE201_EunDeParfum.pdb
 D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\obj\Debug\net6.0\EXE201_EunDeParfum.genruntimeconfig.cache
 D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\obj\Debug\net6.0\ref\EXE201_EunDeParfum.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\AutoMapper.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\Google.Apis.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\Google.Apis.Auth.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\Google.Apis.Core.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\System.CodeDom.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\System.Management.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Management.dll
+D:\SOFTWARE\Ky8\EXE201\EXE201_EunDeParfum\EXE201_EunDeParfum\bin\Debug\net6.0\X.PagedList.dll
