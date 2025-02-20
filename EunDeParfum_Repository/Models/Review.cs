@@ -16,6 +16,7 @@ namespace EunDeParfum_Repository.Models
         public int Rating { get; set; }
         public string Comment { get; set; }
         public DateTime CreatedAt { get; set; }
+        public bool Status { get; set; }
 
         public Product Product { get; set; }
         public Customer Customer { get; set; }

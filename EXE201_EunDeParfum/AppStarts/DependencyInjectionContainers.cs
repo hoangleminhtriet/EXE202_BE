@@ -25,8 +25,10 @@ namespace EXE201_EunDeParfum.AppStarts
 
             //AddService
             services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IReviewService, ReviewService>();
             //AddRepository
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IReviewRepository, ReviewRepository>();
         }
     }
 }
