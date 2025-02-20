@@ -248,6 +248,7 @@ namespace EXE201_EunDeParfum.Controllers
                 // Get customerId form JWT
                 var customerIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
+
                 if (customerIdClaim == null)
                 {
                     return StatusCode(401, new BaseResponse()

@@ -181,11 +181,12 @@ namespace EunDeParfum_Service.Service.Implement
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"Error: {ex.Message}");
                 return new BaseResponse<CustomerResponseModel>()
                 {
                     Code = 500,
                     Success = false,
-                    Message = "Server Error!"
+                    Message = $"Server Error! {ex.Message}"
 
                 };
             }
@@ -906,7 +907,7 @@ namespace EunDeParfum_Service.Service.Implement
     <div class='header'>Welcome to our Exchange Web!</div>
     <div class='content'>
       <p>Please click on the link to verify your account.</p>
-<a href=""https://eundeparfum.vercel.app/verifyemail/" + customer.CustomerId + @""">click here</a>
+<a href=""https://fe-parfum-web.vercel.app//verifyemail/" + customer.CustomerId + @""">click here</a>
     </div>
     <div class='footer'>
       &copy; 2024 Sport Shop. All rights reserved.
@@ -994,7 +995,7 @@ namespace EunDeParfum_Service.Service.Implement
     <div class='header'>Welcome to our Sport Shop Web!</div>
     <div class='content'>
       <p>Please click on the link to verify your account.</p>
-<a href=""https://eundeparfum.vercel.app/verifyemail/" + customer.CustomerId + @""">click here</a>
+<a href=""https://fe-parfum-web.vercel.app//verifyemail/" + customer.CustomerId + @""">click here</a>
       <p>This is the login account and password if you need to login with userId and password.</p>
       <p>Email: <span class='highlight'>" + email + @"</span></p>
       <p>Password: <span class='highlight'>" + password + @"</span></p>
