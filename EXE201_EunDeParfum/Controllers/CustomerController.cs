@@ -29,6 +29,7 @@ namespace EXE201_EunDeParfum.Controllers
                 return StatusCode(result.Code, result);
 
             }
+
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);

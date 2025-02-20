@@ -20,7 +20,7 @@ namespace EXE201_EunDeParfum.AppStarts
             //Add_DbContext
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("hosting"));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
 
             //AddService

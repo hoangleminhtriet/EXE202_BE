@@ -154,6 +154,10 @@ namespace EunDeParfum_Service.Service.Implement
                     Email = email,
                     Name = name,
                     Status = true,
+                    Gender = "Female",
+                    Phone = "09238298322",
+                    Address = "HCM",
+                    ModifiedDate = DateTime.Now,
                     CreatedAt = DateTime.Now,
                     Password = hashPassword,
                     RoleName = "Admin",
@@ -594,7 +598,7 @@ namespace EunDeParfum_Service.Service.Implement
                 {
                     Code = 500,
                     Success = false,
-                    Message = "Server Error!"
+                    Message = $"Server Error: {ex.Message} | {ex.InnerException?.Message}"
 
                 };
             }
