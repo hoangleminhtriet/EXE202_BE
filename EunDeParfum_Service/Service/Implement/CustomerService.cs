@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using EunDeParfum_Repository.Models;
-using EunDeParfum_Repository.Repository;
 using EunDeParfum_Service.RequestModel.Customer;
 using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.Customer;
@@ -18,6 +17,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Google.Apis.Auth;
 using X.PagedList;
+using EunDeParfum_Service.Service.Interface;
+using EunDeParfum_Repository.Repository.Interface;
 
 namespace EunDeParfum_Service.Service.Implement
 {

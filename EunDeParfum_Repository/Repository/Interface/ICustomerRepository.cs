@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EunDeParfum_Repository.Repository
+namespace EunDeParfum_Repository.Repository.Interface
 {
     public interface ICustomerRepository
     {

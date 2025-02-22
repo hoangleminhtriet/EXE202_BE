@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using AutoMapper.Internal;
 using EunDeParfum_Repository.Models;
-using EunDeParfum_Repository.Repository;
+using EunDeParfum_Repository.Repository.Interface;
 using EunDeParfum_Service.RequestModel.Review;
 using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.Review;
+using EunDeParfum_Service.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;

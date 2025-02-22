@@ -1,11 +1,11 @@
 ﻿using EunDeParfum_Repository.Models;
 using EunDeParfum_Service.RequestModel.Customer;
 using EunDeParfum_Service.ResponseModel.BaseResponse;
-using EunDeParfum_Service.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using System.Linq;
+using EunDeParfum_Service.Service.Interface;
 
 namespace EXE201_EunDeParfum.Controllers
 {

@@ -1,5 +1,5 @@
 ﻿using EunDeParfum_Service.RequestModel.Review;
-using EunDeParfum_Service.Service;
+using EunDeParfum_Service.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

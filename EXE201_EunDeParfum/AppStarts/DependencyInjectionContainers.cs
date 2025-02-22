@@ -1,8 +1,8 @@
 ﻿using EunDeParfum_Repository.DbContexts;
-using EunDeParfum_Repository.Repository;
 using EunDeParfum_Repository.Repository.Implement;
-using EunDeParfum_Service.Service;
+using EunDeParfum_Repository.Repository.Interface;
 using EunDeParfum_Service.Service.Implement;
+using EunDeParfum_Service.Service.Interface;
 using Microsoft.EntityFrameworkCore;
 
 namespace EXE201_EunDeParfum.AppStarts

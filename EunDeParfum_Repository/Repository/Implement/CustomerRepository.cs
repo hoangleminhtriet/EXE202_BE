@@ -1,5 +1,6 @@
 ﻿using EunDeParfum_Repository.DbContexts;
 using EunDeParfum_Repository.Models;
+using EunDeParfum_Repository.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

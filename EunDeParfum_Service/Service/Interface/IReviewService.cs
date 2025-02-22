@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EunDeParfum_Service.Service
+namespace EunDeParfum_Service.Service.Interface
 {
     public interface IReviewService
     {
