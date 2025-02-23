@@ -21,6 +21,8 @@ namespace EunDeParfum_Repository.Models
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
+        public bool IsDeleted { get; set; }
+
         public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
         public ICollection<ProductCategory> ProductCategories { get; set; } = new List<ProductCategory>();
     }
