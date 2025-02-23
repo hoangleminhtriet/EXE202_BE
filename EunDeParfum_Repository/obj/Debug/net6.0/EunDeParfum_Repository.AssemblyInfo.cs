@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EunDeParfum_Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f939a856e4b6798c05ddeb0be230641dc53c47a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6f17c169471cd9e45702f50e3df9a9138d39694")]
 [assembly: System.Reflection.AssemblyProductAttribute("EunDeParfum_Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EunDeParfum_Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

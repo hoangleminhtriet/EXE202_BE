@@ -1,5 +1,6 @@
 ﻿using EunDeParfum_Repository.DbContexts;
 using EunDeParfum_Repository.Models;
+using EunDeParfum_Repository.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EunDeParfum_Repository.Repository.Implement
 {
-    public class ProductRepository
+    public class ProductRepository : IProductRepository
     {
         private readonly ApplicationDbContext _context;
         public ProductRepository(ApplicationDbContext context)
@@ -48,16 +49,16 @@ namespace EunDeParfum_Repository.Repository.Implement
             }
         }
 
-        public async Task<List<Product>> GetAllProductsAsync()
+        public async Task<List<Product>> GetAllProductAsync()
         {
             return await _context.Products.ToListAsync();
         }
 
-        public Task<Review> GetReviewByIdAsync(int id)
+        public Task<Product> GetProductByIdAsync(int productId)
         {
             try
             {
-                return _context.Reviews.FirstOrDefaultAsync(r => r.ProductId == id);
+                return _context.Products.FirstOrDefaultAsync(r => r.ProductId == productId);
             }
             catch (Exception e)
             {

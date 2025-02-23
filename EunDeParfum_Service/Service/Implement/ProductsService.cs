@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using EunDeParfum_Repository.Models;
+using EunDeParfum_Repository.Repository.Implement;
 using EunDeParfum_Repository.Repository.Interface;
 using EunDeParfum_Service.RequestModel.Product;
 using EunDeParfum_Service.RequestModel.Review;
@@ -12,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace EunDeParfum_Service.Service.Implement
 {
@@ -53,24 +55,121 @@ namespace EunDeParfum_Service.Service.Implement
 
         }
 
-        public Task<BaseResponse<ProductResponseModel>> DeleteProductAsync(int reviewId, bool status)
+        public async Task<BaseResponse<ProductResponseModel>> DeleteProductAsync(int reviewId, bool status)
         {
             throw new NotImplementedException();
         }
 
-        public Task<DynamicResponse<ProductResponseModel>> GetAllProduct(GetAllReviewRequestModel model)
+        public async Task<DynamicResponse<ProductResponseModel>> GetAllProduct(GetAllProductRequestModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var listProduct = _productRepository.GetAllProductAsync();
+                var result = _mapper.Map<List<ProductResponseModel>>(listProduct);
+                var pageProduct = result
+                    .OrderBy(p => p.ProductId)
+                    .ToPagedList(model.pageNum, model.pageSize);
+                return new DynamicResponse<ProductResponseModel>()
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = null,
+                    Data = new MegaData<ProductResponseModel>()
+                    {
+                        PageInfo = new PagingMetaData()
+                        {
+                            Page = pageProduct.PageNumber,
+                            Size = pageProduct.PageSize,
+                            Sort = "Ascending",
+                            Order = "Id",
+                            TotalPage = pageProduct.PageCount,
+                            TotalItem = pageProduct.TotalItemCount,
+                        },
+                        PageData = pageProduct.ToList()
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                return new DynamicResponse<ProductResponseModel>()
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = "Server Error!",
+                    Data = null
+                };
+            }
         }
 
-        public Task<BaseResponse<ProductResponseModel>> GetProductById(int reviewId)
+        public async Task<BaseResponse<ProductResponseModel>> GetProductById(int productId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var product = await _productRepository.GetProductByIdAsync(productId);
+                if (product == null)
+                {
+                    return new BaseResponse<ProductResponseModel>()
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Not found Review!.",
+                        Data = null
+                    };
+                }
+                return new BaseResponse<ProductResponseModel>()
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = null,
+                    Data = _mapper.Map<ProductResponseModel>(product)
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<ProductResponseModel>()
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = "Server Error!",
+                    Data = null
+                };
+            }
         }
 
-        public Task<BaseResponse<ProductResponseModel>> UpdateProductAsync(CreateProductRequestModel model, int id)
+        public async Task<BaseResponse<ProductResponseModel>> UpdateProductAsync(CreateProductRequestModel model, int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var product = await _productRepository.GetProductByIdAsync(id);
+                if (product == null)
+                {
+                    return new BaseResponse<ProductResponseModel>()
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Not fount Review!.",
+                        Data = null
+                    };
+                }
+                await _productRepository.UpdateProductAsync(_mapper.Map(model, product));
+                return new BaseResponse<ProductResponseModel>()
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Update Review Success!.",
+                    Data = _mapper.Map<ProductResponseModel>(product)
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<ProductResponseModel>()
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = "Server Error!",
+                    Data = null
+                };
+            }
         }
 
 

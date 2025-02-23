@@ -9,11 +9,10 @@ namespace EunDeParfum_Repository.Repository.Interface
 {
     public interface IProductRepository
     {
-        Task<bool> CreateProductAsync(Review review);
-        Task<bool> UpdateProductAsync(Review review);
-        Task<bool> DeleteProductAsync(int reviewId);
-        Task<Review> GetProductByIdAsync(int id);
-        Task<List<Review>> GetAllProductAsync();
-        Task CreateProductAsync(Product product);
+        Task<bool> CreateProductAsync(Product product);
+        Task<bool> UpdateProductAsync(Product product);
+        Task<bool> DeleteProductAsync(int productId);
+        Task<Product> GetProductByIdAsync(int id);
+        Task<List<Product>> GetAllProductAsync();
     }
 }
