@@ -11,6 +11,7 @@ namespace EunDeParfum_Repository.Models
         public int CategoryId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public bool Status { get; set; }
 
         public ICollection<ProductCategory> ProductCategories { get; set; } = new List<ProductCategory>();
     }

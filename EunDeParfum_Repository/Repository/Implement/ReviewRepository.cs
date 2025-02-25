@@ -54,11 +54,11 @@ namespace EunDeParfum_Repository.Repository.Implement
             return await _context.Reviews.ToListAsync();
         }
 
-        public Task<Review> GetReviewByIdAsync(int id)
+        public async Task<Review> GetReviewByIdAsync(int id)
         {
             try
             {
-                return _context.Reviews.FirstOrDefaultAsync(r => r.ReviewId == id);
+                return await _context.Reviews.FirstOrDefaultAsync(r => r.ReviewId == id);
             }
             catch(Exception e)
             {

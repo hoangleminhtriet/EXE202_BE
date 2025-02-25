@@ -13,6 +13,7 @@ namespace EunDeParfum_Repository.Models
         public int Id { get; set; }
         public int ProductId { get; set; }
         public decimal ScoreThreshold { get; set; }
+        public bool Status { get; set; }
 
         public Product Product { get; set; }
     }

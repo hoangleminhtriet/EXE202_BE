@@ -12,6 +12,7 @@ namespace EunDeParfum_Repository.Models
         public int QuestionId { get; set; }
         public string AnswerText { get; set; }
         public int ResultId { get; set; }
+        public bool Status { get; set; }
 
         // Navigation properties
         public Question Question { get; set; }

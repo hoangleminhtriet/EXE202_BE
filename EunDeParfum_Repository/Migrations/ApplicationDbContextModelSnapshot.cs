@@ -40,6 +40,9 @@ namespace EunDeParfum_Repository.Migrations
                     b.Property<int>("ResultId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("QuestionId");
@@ -64,6 +67,9 @@ namespace EunDeParfum_Repository.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.HasKey("CategoryId");
 
@@ -243,12 +249,18 @@ namespace EunDeParfum_Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
@@ -268,6 +280,9 @@ namespace EunDeParfum_Repository.Migrations
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.HasKey("ProductId", "CategoryId");
 
@@ -290,6 +305,9 @@ namespace EunDeParfum_Repository.Migrations
                     b.Property<decimal>("ScoreThreshold")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
@@ -308,6 +326,9 @@ namespace EunDeParfum_Repository.Migrations
                     b.Property<string>("QuestionText")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -329,6 +350,9 @@ namespace EunDeParfum_Repository.Migrations
                     b.Property<string>("ResultName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -359,6 +383,9 @@ namespace EunDeParfum_Repository.Migrations
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
                     b.HasKey("ReviewId");
 
                     b.HasIndex("CustomerId");
@@ -381,6 +408,9 @@ namespace EunDeParfum_Repository.Migrations
 
                     b.Property<int>("QuestionId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
