@@ -1,5 +1,116 @@
 [
   {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.AnswerController",
+    "Method": "CreateAnswer",
+    "RelativePath": "api/answer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Answer.CreateAnswerRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.AnswerController",
+    "Method": "UpdateAnswer",
+    "RelativePath": "api/answer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Answer.CreateAnswerRequestModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.AnswerController",
+    "Method": "GetAnswerById",
+    "RelativePath": "api/answer/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.AnswerController",
+    "Method": "DeleteAnswerAsync",
+    "RelativePath": "api/answer/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.AnswerController",
+    "Method": "DeleteAnswer",
+    "RelativePath": "api/answer/change-status/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.AnswerController",
+    "Method": "GetAllAnswer",
+    "RelativePath": "api/answer/search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Answer.GetAllAnswerRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EXE201_EunDeParfum.Controllers.CustomerController",
     "Method": "Register",
     "RelativePath": "api/customer",
@@ -446,6 +557,228 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.QuestionController",
+    "Method": "CreateQuestion",
+    "RelativePath": "api/question",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Question.CreateQuestionRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.QuestionController",
+    "Method": "UpdateQuestion",
+    "RelativePath": "api/question",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Question.CreateQuestionRequestModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.QuestionController",
+    "Method": "GetQuestionById",
+    "RelativePath": "api/question/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.QuestionController",
+    "Method": "DeleteQuestionAsync",
+    "RelativePath": "api/question/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.QuestionController",
+    "Method": "DeleteQuestion",
+    "RelativePath": "api/question/change-status/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.QuestionController",
+    "Method": "GetAllQuestions",
+    "RelativePath": "api/question/search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Question.GetAllQuestionRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ResultController",
+    "Method": "CreateResult",
+    "RelativePath": "api/result",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Result.CreateResultRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ResultController",
+    "Method": "UpdateResult",
+    "RelativePath": "api/result",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Result.CreateResultRequestModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ResultController",
+    "Method": "GetResultById",
+    "RelativePath": "api/result/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ResultController",
+    "Method": "DeleteResultAsync",
+    "RelativePath": "api/result/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ResultController",
+    "Method": "DeleteResult",
+    "RelativePath": "api/result/change-status/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ResultController",
+    "Method": "GetAllResults",
+    "RelativePath": "api/result/search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Result.GetAllResultRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EXE201_EunDeParfum.Controllers.ReviewController",
     "Method": "CreateReview",
     "RelativePath": "api/review",
@@ -551,6 +884,117 @@
       {
         "Name": "model",
         "Type": "EunDeParfum_Service.RequestModel.Review.GetAllReviewRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.UserAnswerController",
+    "Method": "CreateUserAnswer",
+    "RelativePath": "api/useranswer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.UserAnswer.CreateUserAnswerRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.UserAnswerController",
+    "Method": "UpdateUserAnswer",
+    "RelativePath": "api/useranswer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.UserAnswer.CreateUserAnswerRequestModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.UserAnswerController",
+    "Method": "DeleteUserAnswerAsync",
+    "RelativePath": "api/useranswer",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.UserAnswerController",
+    "Method": "GetUserAnswerById",
+    "RelativePath": "api/useranswer/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.UserAnswerController",
+    "Method": "DeleteUserAnswer",
+    "RelativePath": "api/useranswer/change-status/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.UserAnswerController",
+    "Method": "GetAllUserAnswers",
+    "RelativePath": "api/useranswer/search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.UserAnswer.GetAllUserAnswerRequestModel",
         "IsRequired": true
       }
     ],

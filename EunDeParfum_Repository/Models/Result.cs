@@ -11,6 +11,8 @@ namespace EunDeParfum_Repository.Models
         public int Id { get; set; }
         public string ResultName { get; set; }
         public string Description { get; set; }
+        public bool Status { get; set; }
+
 
         public ICollection<Answer> Answers { get; set; } = new List<Answer>();
     }
