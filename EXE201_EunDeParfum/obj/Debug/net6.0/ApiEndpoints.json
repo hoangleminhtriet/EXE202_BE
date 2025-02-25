@@ -451,11 +451,6 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ProductId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
         "Name": "Name",
         "Type": "System.String",
         "IsRequired": false

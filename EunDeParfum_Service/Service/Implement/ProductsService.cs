@@ -6,6 +6,7 @@ using EunDeParfum_Service.RequestModel.Product;
 using EunDeParfum_Service.RequestModel.Review;
 using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.Product;
+using EunDeParfum_Service.ResponseModel.Question;
 using EunDeParfum_Service.ResponseModel.Review;
 using EunDeParfum_Service.Service.Interface;
 using System;
@@ -55,16 +56,52 @@ namespace EunDeParfum_Service.Service.Implement
 
         }
 
-        public async Task<BaseResponse<ProductResponseModel>> DeleteProductAsync(int reviewId, bool status)
+        public async Task<BaseResponse<ProductResponseModel>> DeleteProductAsync(int productId, bool status)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var product = await _productRepository.GetProductByIdAsync(productId);
+                if (product == null)
+                {
+                    return new BaseResponse<ProductResponseModel>()
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Not found Product!.",
+                        Data = null
+                    };
+                }
+                product.Status = status;
+                await _productRepository.UpdateProductAsync(product);
+                return new BaseResponse<ProductResponseModel>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = null,
+                    Data = _mapper.Map<ProductResponseModel>(product)
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<ProductResponseModel>()
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = "Server Error!",
+                    Data = null
+                };
+            }
         }
 
         public async Task<DynamicResponse<ProductResponseModel>> GetAllProduct(GetAllProductRequestModel model)
         {
             try
             {
-                var listProduct = _productRepository.GetAllProductAsync();
+                var listProduct = await _productRepository.GetAllProductAsync();
+                if (model.Status != null)
+                {
+                    listProduct = listProduct.Where(c => c.Status == model.Status).ToList();
+                }
                 var result = _mapper.Map<List<ProductResponseModel>>(listProduct);
                 var pageProduct = result
                     .OrderBy(p => p.ProductId)
