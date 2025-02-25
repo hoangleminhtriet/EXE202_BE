@@ -30,6 +30,7 @@ namespace EXE201_EunDeParfum.AppStarts
             services.AddScoped<IUserAnswersService, UserAnswersService>();
             services.AddScoped<IQuestionService, QuestionsService>();
             services.AddScoped<IResultService, ResultsService>();
+            services.AddScoped<IProductsService, ProductsService>();
             //AddRepository
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IReviewRepository, ReviewRepository>();
@@ -37,6 +38,7 @@ namespace EXE201_EunDeParfum.AppStarts
             services.AddScoped<IUserAnswerRepository, UserAnswerRepository>();
             services.AddScoped<IQuestionRepository, QuestionRepository>();
             services.AddScoped<IResultRepository, ResultRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
         }
     }
 }

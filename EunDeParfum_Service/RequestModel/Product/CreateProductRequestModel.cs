@@ -9,7 +9,6 @@ namespace EunDeParfum_Service.RequestModel.Product
 {
     public class CreateProductRequestModel
     {
-        public int ProductId { get; set; }
         
         public string Name { get; set; }
         public string Brand { get; set; }

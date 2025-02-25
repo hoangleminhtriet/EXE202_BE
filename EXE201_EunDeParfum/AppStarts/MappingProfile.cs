@@ -2,12 +2,14 @@
 using EunDeParfum_Repository.Models;
 using EunDeParfum_Service.RequestModel.Answer;
 using EunDeParfum_Service.RequestModel.Customer;
+using EunDeParfum_Service.RequestModel.Product;
 using EunDeParfum_Service.RequestModel.Question;
 using EunDeParfum_Service.RequestModel.Result;
 using EunDeParfum_Service.RequestModel.Review;
 using EunDeParfum_Service.RequestModel.UserAnswer;
 using EunDeParfum_Service.ResponseModel.Answer;
 using EunDeParfum_Service.ResponseModel.Customer;
+using EunDeParfum_Service.ResponseModel.Product;
 using EunDeParfum_Service.ResponseModel.Question;
 using EunDeParfum_Service.ResponseModel.Result;
 using EunDeParfum_Service.ResponseModel.Review;
@@ -54,6 +56,12 @@ namespace EXE201_EunDeParfum.AppStarts
             CreateMap<CreateQuestionRequestModel, QuestionResponseModel>().ReverseMap();
             CreateMap<CreateQuestionRequestModel, Question>().ReverseMap();
             CreateMap<QuestionResponseModel, Question>().ReverseMap();
+
+            //Product
+            CreateMap<CreateProductRequestModel, Product>().ReverseMap();
+            CreateMap<CreateProductRequestModel, ProductResponseModel>().ReverseMap();
+            CreateMap<CreateProductRequestModel, Product>().ReverseMap();
+            CreateMap<ProductResponseModel, Product>().ReverseMap();
         }
     }
 }
