@@ -18,6 +18,8 @@ namespace EunDeParfum_Repository.Models
         public string Status { get; set; }
 
         public Customer Customer { get; set; }
+
+        public bool IsDelete { get; set; }
         public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
     }
 

@@ -33,7 +33,12 @@ namespace EunDeParfum_Service.Service.Implement
             try
             {
                 var product = _mapper.Map<Product>(model);
+                product.CreatedAt = DateTime.UtcNow;
+                product.UpdatedAt = DateTime.UtcNow;
                 await _productRepository.CreateProductAsync(product);
+                
+
+                
                 return new BaseResponse<ProductResponseModel>()
                 {
                     Code = 201,
@@ -48,7 +53,7 @@ namespace EunDeParfum_Service.Service.Implement
                 {
                     Code = 500,
                     Success = false,
-                    Message = "Server Error!",
+                    Message = ex.Message,
                     Data = null
                 };
             }
@@ -141,6 +146,7 @@ namespace EunDeParfum_Service.Service.Implement
             try
             {
                 var product = await _productRepository.GetProductByIdAsync(id);
+                product.UpdatedAt = DateTime.UtcNow;
                 if (product == null)
                 {
                     return new BaseResponse<ProductResponseModel>()

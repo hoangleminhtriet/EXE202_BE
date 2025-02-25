@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "EXE201_EunDeParfum/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "EunDeParfum_Repository": "1.0.0",
           "EunDeParfum_Service": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.36",
@@ -33,7 +34,7 @@
           }
         }
       },
-      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.0": {
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Microsoft.Extensions.Options": "6.0.1"
@@ -41,7 +42,7 @@
         "runtime": {
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.0.0"
+            "fileVersion": "12.0.1.0"
           }
         }
       },
@@ -829,7 +830,7 @@
       "EunDeParfum_Repository/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Google.Apis.Auth": "1.68.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.15",
           "Microsoft.EntityFrameworkCore": "6.0.36",
@@ -873,12 +874,12 @@
       "path": "automapper/12.0.1",
       "hashPath": "automapper.12.0.1.nupkg.sha512"
     },
-    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.0": {
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XCJ4E3oKrbRl1qY9Mr+7uyC0xZj1+bqQjmQRWTiTKiVuuXTny+7YFWHi20tPjwkMukLbicN6yGlDy5PZ4wyi1w==",
-      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
-      "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
+      "sha512": "sha512-+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512"
     },
     "Google.Apis/1.68.0": {
       "type": "package",

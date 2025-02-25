@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fghMw2TaHIw=",
+  "dgSpecHash": "ubptU7RPpzg=",
   "success": true,
   "projectFilePath": "D:\\Chuyen Nganh 8\\EXE202\\EXE202_BE\\EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bonzy Toi Day\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\Bonzy Toi Day\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\Bonzy Toi Day\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Bonzy Toi Day\\.nuget\\packages\\google.apis\\1.68.0\\google.apis.1.68.0.nupkg.sha512",
     "C:\\Users\\Bonzy Toi Day\\.nuget\\packages\\google.apis.auth\\1.68.0\\google.apis.auth.1.68.0.nupkg.sha512",
     "C:\\Users\\Bonzy Toi Day\\.nuget\\packages\\google.apis.core\\1.68.0\\google.apis.core.1.68.0.nupkg.sha512",

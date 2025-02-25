@@ -1,12 +1,18 @@
-﻿using System;
+﻿using EunDeParfum_Service.RequestModel.Category;
+using EunDeParfum_Service.ResponseModel;
+using EunDeParfum_Service.ResponseModel.BaseResponse;
+using EunDeParfum_Service.ResponseModel.Category;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace EunDeParfum_Service.Service.Interface
 {
-    internal class ICategoriesService
+    public interface ICategoriesService
     {
+        Task<BaseResponse<CategoryResponseModel>> CreateCategoryAsync(CreateCategoryRequestModel model);
+        Task<BaseResponse<CategoryResponseModel>> UpdateCategoryAsync(CreateCategoryRequestModel model, int id);
+        Task<BaseResponse<CategoryResponseModel>> DeleteCategoryAsync(int id, bool status);
+        Task<BaseResponse<CategoryResponseModel>> GetCategoryByIdAsync(int id);
+        Task<DynamicResponse<CategoryResponseModel>> GetAllCategoriesAsync(GetAllCategoryRequestModel model);
     }
 }

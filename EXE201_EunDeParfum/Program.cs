@@ -2,6 +2,11 @@ using EunDeParfum_Repository.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using EunDeParfum_Repository;
 using EXE201_EunDeParfum.AppStarts;
+using EunDeParfum_Service.Service.Implement;
+using EunDeParfum_Service.Service.Interface;
+using EunDeParfum_Repository.Repository.Implement;
+using EunDeParfum_Repository.Repository.Interface;
+using EunDeParfum_Service.Mapper;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +20,12 @@ builder.Services.ConfigureAuthService(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.ConfigureAutoMapper();
+
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
+builder.Services.AddTransient<IProductsService, ProductsService>();
+
 
 builder.Services.ServiceContainer(builder.Configuration);
 

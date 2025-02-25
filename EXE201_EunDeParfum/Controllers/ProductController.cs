@@ -45,7 +45,7 @@ namespace EXE201_EunDeParfum.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin, Manager")]
+        //[Authorize(Roles = "Admin, Manager")]
         [HttpPost("CreateProduct")]
         public async Task<IActionResult> CreateProduct([FromForm]CreateProductRequestModel model)
         {

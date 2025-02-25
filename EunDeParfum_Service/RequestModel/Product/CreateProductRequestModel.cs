@@ -9,7 +9,6 @@ namespace EunDeParfum_Service.RequestModel.Product
 {
     public class CreateProductRequestModel
     {
-        public int ProductId { get; set; }
         
         public string Name { get; set; }
         public string Brand { get; set; }
@@ -17,8 +16,6 @@ namespace EunDeParfum_Service.RequestModel.Product
         public int Stock { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-        public bool IsDeleted { get; set; }
+        public bool IsDeleted { get; set; } = false;
     }
 }

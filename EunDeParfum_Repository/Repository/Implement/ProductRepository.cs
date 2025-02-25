@@ -21,7 +21,7 @@ namespace EunDeParfum_Repository.Repository.Implement
         {
             try
             {
-                _context.Products.AddAsync(product);
+                await _context.Products.AddAsync(product);
                 await _context.SaveChangesAsync();
                 return true;
             }
