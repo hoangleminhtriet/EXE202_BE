@@ -17,13 +17,13 @@ namespace EXE201_EunDeParfum.AppStarts
                 options.LowercaseQueryStrings = true;
             });
 
-            //Add_DbContext
+            // Add_DbContext
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
 
-            //AddService
+            // AddService
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IReviewService, ReviewService>();
             services.AddScoped<IAnswersService, AnswersService>();
@@ -31,7 +31,11 @@ namespace EXE201_EunDeParfum.AppStarts
             services.AddScoped<IQuestionService, QuestionsService>();
             services.AddScoped<IResultService, ResultsService>();
             services.AddScoped<IProductsService, ProductsService>();
-            //AddRepository
+            services.AddScoped<IProductCategoryService, ProductCategoryService>(); // ✅ Thêm mới
+            services.AddScoped<ICategoriesService, CategoriesService>();
+            services.AddScoped<IProductRecommendationService, ProductRecommendationService>();
+
+            // AddRepository
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IReviewRepository, ReviewRepository>();
             services.AddScoped<IAnswerRepository, AnswerRepository>();
@@ -39,6 +43,9 @@ namespace EXE201_EunDeParfum.AppStarts
             services.AddScoped<IQuestionRepository, QuestionRepository>();
             services.AddScoped<IResultRepository, ResultRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>(); // ✅ Thêm mới
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IProductRecommendationRepository, ProductRecommendationRepository>();
         }
     }
 }

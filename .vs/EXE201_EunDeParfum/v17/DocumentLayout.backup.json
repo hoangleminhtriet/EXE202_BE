@@ -1,21 +1,129 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\",
+  "WorkspaceRootPath": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\software\\ky8\\exe201\\exe201_eundeparfum\\eundeparfum_service\\service\\implement\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\exe201_eundeparfum\\appstarts\\automapperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\appstarts\\automapperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\software\\ky8\\exe201\\exe201_eundeparfum\\exe201_eundeparfum\\appstarts\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\appstarts\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\exe201_eundeparfum\\appstarts\\authconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\appstarts\\authconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\software\\ky8\\exe201\\exe201_eundeparfum\\exe201_eundeparfum\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\exe201_eundeparfum\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\software\\ky8\\exe201\\exe201_eundeparfum\\eundeparfum_service\\service\\implement\\questionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\exe201_eundeparfum\\appstarts\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\appstarts\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\exe201_eundeparfum\\appstarts\\swaggerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\appstarts\\swaggerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\exe201_eundeparfum\\controllers\\productcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\controllers\\productcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\exe201_eundeparfum\\controllers\\resultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\controllers\\resultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\service\\implement\\productcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\productcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\service\\interface\\iproductcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\interface\\iproductcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_repository\\repository\\implement\\productcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\implement\\productcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_repository\\repository\\interface\\iproductcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\interface\\iproductcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\responsemodel\\productcate\\listproductcategoryresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\responsemodel\\productcate\\listproductcategoryresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\responsemodel\\productcate\\productcategoryresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\responsemodel\\productcate\\productcategoryresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\responsemodel\\review\\reviewresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\responsemodel\\review\\reviewresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\responsemodel\\customer\\loginresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\responsemodel\\customer\\loginresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\requestmodel\\productcate\\getproductsbycategoryrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\productcate\\getproductsbycategoryrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\requestmodel\\productcate\\getcategoriesbyproductrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\productcate\\getcategoriesbyproductrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\requestmodel\\productcate\\deleteproductcategoryrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\productcate\\deleteproductcategoryrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\requestmodel\\productcate\\updateproductcategoryrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\productcate\\updateproductcategoryrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\requestmodel\\productcate\\createproductcategoryrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\productcate\\createproductcategoryrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\service\\implement\\resultsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\resultsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_repository\\repository\\interface\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\interface\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_repository\\models\\productcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\models\\productcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\service\\interface\\iproductsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\interface\\iproductsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_repository\\repository\\interface\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\interface\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\requestmodel\\result\\getallresultrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\result\\getallresultrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\responsemodel\\result\\resultresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\responsemodel\\result\\resultresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\responsemodel\\question\\questionresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\responsemodel\\question\\questionresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\requestmodel\\result\\createresultrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\result\\createresultrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\service\\implement\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\chuyen nganh 8\\exe_202\\exe202_be\\eundeparfum_service\\service\\implement\\questionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\questionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -25,7 +133,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 233,
+          "DockedWidth": 271,
           "SelectedChildIndex": 20,
           "Children": [
             {
@@ -35,10 +143,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -110,26 +214,364 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthConfig.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\AuthConfig.cs",
+              "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\AuthConfig.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\AuthConfig.cs",
+              "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\AuthConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:45:39.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AutoMapperConfig.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\AutoMapperConfig.cs",
+              "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\AutoMapperConfig.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\AutoMapperConfig.cs",
+              "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\AutoMapperConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:45:37.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SwaggerConfig.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\SwaggerConfig.cs",
+              "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\SwaggerConfig.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\SwaggerConfig.cs",
+              "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\SwaggerConfig.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:43:40.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductCategoryController.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\Controllers\\ProductCategoryController.cs",
+              "RelativeDocumentMoniker": "EXE201_EunDeParfum\\Controllers\\ProductCategoryController.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\Controllers\\ProductCategoryController.cs",
+              "RelativeToolTip": "EXE201_EunDeParfum\\Controllers\\ProductCategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:43:21.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResultController.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\Controllers\\ResultController.cs",
+              "RelativeDocumentMoniker": "EXE201_EunDeParfum\\Controllers\\ResultController.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\Controllers\\ResultController.cs",
+              "RelativeToolTip": "EXE201_EunDeParfum\\Controllers\\ResultController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAswGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:41:11.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductCategoryService.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\ProductCategoryService.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\ProductCategoryService.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\ProductCategoryService.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\ProductCategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:39:05.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ListProductCategoryResponseModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\ProductCate\\ListProductCategoryResponseModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\ResponseModel\\ProductCate\\ListProductCategoryResponseModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\ProductCate\\ListProductCategoryResponseModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\ResponseModel\\ProductCate\\ListProductCategoryResponseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:37:12.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ReviewResponseModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\Review\\ReviewResponseModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\ResponseModel\\Review\\ReviewResponseModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\Review\\ReviewResponseModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\ResponseModel\\Review\\ReviewResponseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:36:46.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginResponseModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\Customer\\LoginResponseModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\ResponseModel\\Customer\\LoginResponseModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\Customer\\LoginResponseModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\ResponseModel\\Customer\\LoginResponseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:36:42.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductCategoryResponseModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\ProductCate\\ProductCategoryResponseModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\ResponseModel\\ProductCate\\ProductCategoryResponseModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\ProductCate\\ProductCategoryResponseModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\ResponseModel\\ProductCate\\ProductCategoryResponseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:36:28.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GetProductsByCategoryRequestModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\GetProductsByCategoryRequestModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\ProductCate\\GetProductsByCategoryRequestModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\GetProductsByCategoryRequestModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\ProductCate\\GetProductsByCategoryRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:35:55.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetCategoriesByProductRequestModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\GetCategoriesByProductRequestModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\ProductCate\\GetCategoriesByProductRequestModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\GetCategoriesByProductRequestModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\ProductCate\\GetCategoriesByProductRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:35:30.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DeleteProductCategoryRequestModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\DeleteProductCategoryRequestModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\ProductCate\\DeleteProductCategoryRequestModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\DeleteProductCategoryRequestModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\ProductCate\\DeleteProductCategoryRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:35:14.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UpdateProductCategoryRequestModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\UpdateProductCategoryRequestModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\ProductCate\\UpdateProductCategoryRequestModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\UpdateProductCategoryRequestModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\ProductCate\\UpdateProductCategoryRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:34:51.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreateProductCategoryRequestModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\CreateProductCategoryRequestModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\ProductCate\\CreateProductCategoryRequestModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\CreateProductCategoryRequestModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\ProductCate\\CreateProductCategoryRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:34:38.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ResultsService.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\ResultsService.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\ResultsService.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\ResultsService.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\ResultsService.cs",
+              "ViewState": "AgIAALIAAAAAAAAAAAAwwNsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:32:45.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IProductCategoryService.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IProductCategoryService.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Interface\\IProductCategoryService.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IProductCategoryService.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\Service\\Interface\\IProductCategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:26:33.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IProductsService.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IProductsService.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Interface\\IProductsService.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IProductsService.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\Service\\Interface\\IProductsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:24:04.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Interface\\IProductRepository.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\IProductRepository.cs",
+              "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Interface\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:20:41.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ICustomerRepository.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\ICustomerRepository.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Interface\\ICustomerRepository.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\ICustomerRepository.cs",
+              "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Interface\\ICustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:20:25.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IProductCategoryRepository.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\IProductCategoryRepository.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Interface\\IProductCategoryRepository.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\IProductCategoryRepository.cs",
+              "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Interface\\IProductCategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:20:04.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductCategoryRepository.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Implement\\ProductCategoryRepository.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Implement\\ProductCategoryRepository.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Implement\\ProductCategoryRepository.cs",
+              "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Implement\\ProductCategoryRepository.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:19:47.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ResultResponseModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\Result\\ResultResponseModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\ResponseModel\\Result\\ResultResponseModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\Result\\ResultResponseModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\ResponseModel\\Result\\ResultResponseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:18:05.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "QuestionResponseModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\Question\\QuestionResponseModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\ResponseModel\\Question\\QuestionResponseModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\Question\\QuestionResponseModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\ResponseModel\\Question\\QuestionResponseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:18:00.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GetAllResultRequestModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\Result\\GetAllResultRequestModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\Result\\GetAllResultRequestModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\Result\\GetAllResultRequestModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\Result\\GetAllResultRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:16:25.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductCategory.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Models\\ProductCategory.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Repository\\Models\\ProductCategory.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\Models\\ProductCategory.cs",
+              "RelativeToolTip": "EunDeParfum_Repository\\Models\\ProductCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:13:24.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "ProductsService.cs",
-              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
-              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\Service\\Implement\\ProductsService.cs*",
-              "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\ProductsService.cs*",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAnwGMAAAAnAAAAAAAAAA==",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwGMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T17:17:21.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MappingProfile.cs",
-              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
-              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
               "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAzwD8AAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T17:15:22.843Z",
               "EditorCaption": ""
@@ -138,11 +580,11 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "DependencyInjectionContainers.cs",
-              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
-              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
               "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACgAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAUwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T17:10:28.9Z",
               "EditorCaption": ""
@@ -150,27 +592,8 @@
           ]
         },
         {
-          "DockedWidth": 233,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QuestionsService.cs",
-              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
-              "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
-              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
-              "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAgwGAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T17:11:19.551Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 233,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 195,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -178,7 +601,37 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "QuestionsService.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T17:11:19.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CreateResultRequestModel.cs",
+              "DocumentMoniker": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\Result\\CreateResultRequestModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\Result\\CreateResultRequestModel.cs",
+              "ToolTip": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\Result\\CreateResultRequestModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\Result\\CreateResultRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:15:27.662Z",
+              "EditorCaption": ""
             }
           ]
         },
