@@ -11,5 +11,7 @@ namespace EunDeParfum_Service.Service.Interface
     public interface IOrderDetailService
     {
         Task<List<OrderDetailResponseModel>> CreateListOrderDetails(CreateOrderDetailRequestModel model);
+        Task<List<OrderDetailResponseModel>> GetOrderDetailByIdAsync(int orderDetailId);
+        Task<List<OrderDetailResponseModel>> GetListOrderDetailsByOrderId(int orderId);
     }
 }

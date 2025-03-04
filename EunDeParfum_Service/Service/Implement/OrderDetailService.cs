@@ -5,6 +5,7 @@ using EunDeParfum_Repository.Repository.Interface;
 using EunDeParfum_Service.RequestModel.OrderDetail;
 using EunDeParfum_Service.ResponseModel.OrderDetail;
 using EunDeParfum_Service.Service.Interface;
+using Newtonsoft.Json.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,17 @@ namespace EunDeParfum_Service.Service.Implement
                 UnitPrice = od.UnitPrice
             }).ToList();
             return response;
+        }
+
+        public async Task<List<OrderDetailResponseModel>> GetListOrderDetailsByOrderId(int orderId)
+        {
+            var orderDetails = await _orderDetailRepository.GetListOrderDetailAsyncByOrderId(orderId);
+            return _mapper.Map<List<OrderDetailResponseModel>>(orderDetails);
+        }
+
+        public Task<List<OrderDetailResponseModel>> GetOrderDetailByIdAsync(int orderDetailId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

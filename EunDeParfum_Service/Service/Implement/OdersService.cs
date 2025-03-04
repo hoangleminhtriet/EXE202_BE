@@ -85,9 +85,31 @@ namespace EunDeParfum_Service.Service.Implement
             throw new NotImplementedException();
         }
 
-        public Task<BaseResponse<OrderReponseModel>> GetOrderByIdAsync(int orderId)
+        public async Task<BaseResponse<OrderReponseModel>> GetOrderByIdAsync(int orderId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var order = _orderRepository.GetOrderByIdAsync(orderId);
+                var response = _mapper.Map<OrderReponseModel>(order);
+                response.OrderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(orderId);
+                return new BaseResponse<OrderReponseModel>()
+                {
+                    Code = 201,
+                    Success = true,
+                    Message = "Create Order success!",
+                    Data = response
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<OrderReponseModel>()
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = "Server Error!",
+                    Data = null
+                };
+            }
         }
 
         public Task<BaseResponse<OrderReponseModel>> UpdateOrderAsync(UpdateOrderRequestModel model, int orderId)
