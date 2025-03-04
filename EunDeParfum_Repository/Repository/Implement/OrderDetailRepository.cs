@@ -32,6 +32,11 @@ namespace EunDeParfum_Repository.Repository.Implement
             }
         }
 
+        public async Task<List<OrderDetail>> GetAll()
+        {
+            return await _context.OrderDetails.ToListAsync();
+        }
+
         public async Task<List<OrderDetail>> GetListOrderDetailAsyncByOrderId(int orderId)
         {
             return await _context.OrderDetails.Where(od => od.OrderId == orderId).ToListAsync();

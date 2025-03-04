@@ -7,6 +7,7 @@ using EunDeParfum_Service.RequestModel.OrderDetail;
 using EunDeParfum_Service.ResponseModel;
 using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.Order;
+using EunDeParfum_Service.ResponseModel.OrderDetail;
 using EunDeParfum_Service.Service.Interface;
 using System;
 using System.Collections.Generic;
@@ -60,7 +61,7 @@ namespace EunDeParfum_Service.Service.Implement
                     Code = 201,
                     Success = true,
                     Message = "Create Order success!",
-                    Data = _mapper.Map<OrderReponseModel>(createOrderDetails)
+                    Data = response
                 };
             }
             catch (Exception ex)
@@ -69,7 +70,7 @@ namespace EunDeParfum_Service.Service.Implement
                 {
                     Code = 500,
                     Success = false,
-                    Message = "Server Error!",
+                    Message = ex.Message,
                     Data = null
                 };
             }
@@ -80,16 +81,106 @@ namespace EunDeParfum_Service.Service.Implement
             throw new NotImplementedException();
         }
 
-        public Task<DynamicResponse<OrderReponseModel>> GetAllOrdersAsync(GetAllOrderRequestModel model)
+        public async Task<DynamicResponse<OrderReponseModel>> GetAllOrdersAsync(GetAllOrderRequestModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // 1️⃣ Lấy danh sách đơn hàng từ DB theo điều kiện tìm kiếm
+                var orders = await _orderRepository.GetAllOrdersAsync();
+
+                // 2️⃣ Kiểm tra dữ liệu
+                if (!orders.Any())
+                {
+                    return new DynamicResponse<OrderReponseModel>()
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "No orders found!",
+                        Data = null
+                    };
+                }
+
+                // 3️⃣ Phân trang
+                var pageOrders = orders
+                    .OrderByDescending(o => o.OrderDate) // Sắp xếp mới nhất
+                    .Skip((model.pageNum - 1) * model.pageSize) // Bỏ qua các bản ghi trước đó
+                    .Take(model.pageSize) // Lấy số lượng theo pageSize
+                    .ToList();
+
+                var totalItemCount = orders.Count();
+                var totalPages = (int)Math.Ceiling((double)totalItemCount / model.pageSize);
+
+
+
+
+
+                // 4️⃣ Lấy toàn bộ OrderDetails theo danh sách OrderId
+                var orderIds = orders.Select(o => o.OrderId).ToList();
+                var allOrderDetails = await _orderDetailService.GetListOrderDetailsByListOrderIds(orderIds);
+
+                // 5️⃣ Chuyển OrderDetails thành Dictionary (Key: OrderId, Value: List<OrderDetailResponseModel>)
+                var orderDetailsDict = allOrderDetails
+                    .GroupBy(od => od.OrderId)
+                    .ToDictionary(g => g.Key, g => g.ToList());
+
+                // 6️⃣  Chuyển dữ liệu sang Dictionary<OrderId, OrderReponseModel>
+                var responseList = pageOrders.Select(order => new OrderReponseModel
+                {
+                    OrderId = order.OrderId,
+                    TotalAmount = order.TotalAmount,
+                    OrderDate = order.OrderDate,
+                    OrderDetails = orderDetailsDict.ContainsKey(order.OrderId) ? orderDetailsDict[order.OrderId] : new List<OrderDetailResponseModel>()
+                }).ToList();
+
+                // 7️⃣ Tạo MegaData<OrderResponseModel>
+                var responseData = new MegaData<OrderReponseModel>()
+                {
+                    PageInfo = new PagingMetaData()
+                    {
+                        Page = model.pageNum,
+                        Size = model.pageSize,
+                        Sort = "Descending",
+                        Order = "OrderDate",
+                        TotalPage = totalPages,
+                        TotalItem = totalItemCount
+                    },
+                    SearchInfo = new SearchCondition()
+                    {
+                        keyWord = null, // Bạn có thể thêm nếu cần tìm kiếm theo keyword
+                        role = null,
+                        status = null,
+                        is_Verify = null,
+                        is_Delete = null
+                    },
+                    PageData = responseList
+                };
+
+                return new DynamicResponse<OrderReponseModel>()
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Get all orders success!",
+                    Data = responseData
+                };
+            }
+            catch (Exception ex)
+            {
+                return new DynamicResponse<OrderReponseModel>()
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = "Server Error!",
+                    Data = null
+                };
+            }
         }
+
 
         public async Task<BaseResponse<OrderReponseModel>> GetOrderByIdAsync(int orderId)
         {
             try
             {
-                var order = _orderRepository.GetOrderByIdAsync(orderId);
+                var order = await _orderRepository.GetOrderByIdAsync(orderId);
                 var response = _mapper.Map<OrderReponseModel>(order);
                 response.OrderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(orderId);
                 return new BaseResponse<OrderReponseModel>()
@@ -106,7 +197,7 @@ namespace EunDeParfum_Service.Service.Implement
                 {
                     Code = 500,
                     Success = false,
-                    Message = "Server Error!",
+                    Message = ex.Message,
                     Data = null
                 };
             }

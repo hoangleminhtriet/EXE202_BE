@@ -49,7 +49,7 @@ namespace EunDeParfum_Repository.Repository.Implement
             }
         }
 
-        public async Task<List<Order>> GetAllOrders()
+        public async Task<List<Order>> GetAllOrdersAsync()
         {
             return await _context.Orders.Where(o => o.IsDeleted == false).ToListAsync();
         }

@@ -13,6 +13,6 @@ namespace EunDeParfum_Repository.Repository.Interface
         Task<bool> UpdateOrderAsync(Order order);
         Task<bool> DeleteOrderAsync(int orderId);
         Task<Order> GetOrderByIdAsync(int orderId);
-        Task<List<Order>> GetAllOrders();
+        Task<List<Order>> GetAllOrdersAsync();
     }
 }

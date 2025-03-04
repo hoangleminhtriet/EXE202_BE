@@ -21,7 +21,8 @@ using EunDeParfum_Service.ResponseModel;
 using EunDeParfum_Service.RequestModel.ProductRecommendation;
 using EunDeParfum_Service.ResponseModel.ProductRecommendation;
 using EunDeParfum_Service.RequestModel.Order;
-using EunDeParfum_Service.ResponseModel.OrderDetail;  // Thêm dòng này để sử dụng Category
+using EunDeParfum_Service.ResponseModel.OrderDetail;
+using EunDeParfum_Service.ResponseModel.Order;  // Thêm dòng này để sử dụng Category
 
 namespace EXE201_EunDeParfum.AppStarts
 {
@@ -87,6 +88,8 @@ namespace EXE201_EunDeParfum.AppStarts
 
             //Order
             CreateMap<CreateOrderRequestModel, Order>().ReverseMap();
+            CreateMap<CreateOrderRequestModel, OrderReponseModel>().ReverseMap();
+            CreateMap<OrderReponseModel, Order>().ReverseMap();
 
             //OrderDetail
             CreateMap<OrderDetailResponseModel, OrderDetail>().ReverseMap();

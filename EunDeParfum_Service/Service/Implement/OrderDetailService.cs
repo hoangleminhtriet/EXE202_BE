@@ -47,6 +47,16 @@ namespace EunDeParfum_Service.Service.Implement
             return response;
         }
 
+        public async Task<List<OrderDetailResponseModel>> GetListOrderDetailsByListOrderIds(List<int> orderIds)
+        {
+            if (orderIds == null || !orderIds.Any()) return new List<OrderDetailResponseModel>();
+
+            var orderDetails = await _orderDetailRepository.GetAll();
+            var orderDetail = orderDetails.Where(od => orderIds.Contains(od.OrderId)).ToList();
+
+            return _mapper.Map<List<OrderDetailResponseModel>>(orderDetails);
+        }
+
         public async Task<List<OrderDetailResponseModel>> GetListOrderDetailsByOrderId(int orderId)
         {
             var orderDetails = await _orderDetailRepository.GetListOrderDetailAsyncByOrderId(orderId);

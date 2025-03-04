@@ -11,5 +11,6 @@ namespace EunDeParfum_Repository.Repository.Interface
     {
         Task<bool> CreateListOrderDetailAsync(List<OrderDetail> list);
         Task<List<OrderDetail>> GetListOrderDetailAsyncByOrderId(int orderId);
+        Task<List<OrderDetail>> GetAll();
     }
 }
