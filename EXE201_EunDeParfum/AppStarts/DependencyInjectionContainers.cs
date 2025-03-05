@@ -34,6 +34,8 @@ namespace EXE201_EunDeParfum.AppStarts
             services.AddScoped<IProductCategoryService, ProductCategoryService>(); // ✅ Thêm mới
             services.AddScoped<ICategoriesService, CategoriesService>();
             services.AddScoped<IProductRecommendationService, ProductRecommendationService>();
+            services.AddScoped<IOderService, OdersService>();
+            services.AddScoped<IOrderDetailService, OrderDetailService>();
 
             // AddRepository
             services.AddScoped<ICustomerRepository, CustomerRepository>();
@@ -46,6 +48,9 @@ namespace EXE201_EunDeParfum.AppStarts
             services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>(); // ✅ Thêm mới
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRecommendationRepository, ProductRecommendationRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+
         }
     }
 }
