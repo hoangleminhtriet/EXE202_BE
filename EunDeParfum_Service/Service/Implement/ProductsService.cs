@@ -34,6 +34,7 @@ namespace EunDeParfum_Service.Service.Implement
             try
             {
                 var product = _mapper.Map<Product>(model);
+                product.Status = true;
                 await _productRepository.CreateProductAsync(product);
                 return new BaseResponse<ProductResponseModel>()
                 {
