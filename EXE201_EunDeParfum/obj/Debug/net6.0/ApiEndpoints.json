@@ -111,6 +111,117 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.CategoryController",
+    "Method": "ChangeCategoryStatus",
+    "RelativePath": "api/category/change-status/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.CategoryController",
+    "Method": "CreateCategory",
+    "RelativePath": "api/category/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Category.CreateCategoryRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.CategoryController",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/category/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.CategoryController",
+    "Method": "GetCategoryById",
+    "RelativePath": "api/category/getby/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.CategoryController",
+    "Method": "GetAllCategories",
+    "RelativePath": "api/category/search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.GetAllCategoryRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.CategoryController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/category/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Category.CreateCategoryRequestModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EXE201_EunDeParfum.Controllers.CustomerController",
     "Method": "Register",
     "RelativePath": "api/customer",
@@ -401,6 +512,154 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "Create",
+    "RelativePath": "api/order/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Order.CreateOrderRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "GetAll",
+    "RelativePath": "api/order/getall",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Order.GetAllOrderRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "GetById",
+    "RelativePath": "api/order/getbyid/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ProductRecommendationController",
+    "Method": "CreateProductRecommendation",
+    "RelativePath": "api/product-recommendations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.ProductRecommendation.CreateProductRecommendationRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ProductRecommendationController",
+    "Method": "GetAllProductRecommendations",
+    "RelativePath": "api/product-recommendations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNum",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ProductRecommendationController",
+    "Method": "GetProductRecommendationById",
+    "RelativePath": "api/product-recommendations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ProductRecommendationController",
+    "Method": "UpdateProductRecommendation",
+    "RelativePath": "api/product-recommendations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.ProductRecommendation.CreateProductRecommendationRequestModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ProductRecommendationController",
+    "Method": "ChangeProductRecommendationStatus",
+    "RelativePath": "api/product-recommendations/{id}/change-status",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EXE201_EunDeParfum.Controllers.ProductController",
     "Method": "DeleteProductAsync",
     "RelativePath": "api/product/{id}",
@@ -509,6 +768,22 @@
       {
         "Name": "model",
         "Type": "EunDeParfum_Service.RequestModel.Product.GetAllProductRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ProductController",
+    "Method": "GetProductsByCategoryId",
+    "RelativePath": "api/product/getproductbycategory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj": {}
+    "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj": {}
   },
   "projects": {
-    "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj": {
+    "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj",
+        "projectUniqueName": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj",
         "projectName": "EunDeParfum_Repository",
-        "projectPath": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj",
-        "packagesPath": "C:\\Users\\Bonzy Toi Day\\.nuget\\packages\\",
-        "outputPath": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\obj\\",
+        "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bonzy Toi Day\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -102,21 +103,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj": {
+    "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj",
+        "projectUniqueName": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj",
         "projectName": "EunDeParfum_Service",
-        "projectPath": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj",
-        "packagesPath": "C:\\Users\\Bonzy Toi Day\\.nuget\\packages\\",
-        "outputPath": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Service\\obj\\",
+        "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bonzy Toi Day\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,14 +125,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj": {
-                "projectPath": "D:\\Chuyen Nganh 8\\EXE_202\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj"
+              "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj": {
+                "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj"
               }
             }
           }
@@ -196,7 +198,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
