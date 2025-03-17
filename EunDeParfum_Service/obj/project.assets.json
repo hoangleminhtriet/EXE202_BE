@@ -3773,11 +3773,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\EunDeParfum_Service.csproj",
+      "projectUniqueName": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj",
       "projectName": "EunDeParfum_Service",
-      "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\EunDeParfum_Service.csproj",
+      "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\obj\\",
+      "outputPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3795,8 +3795,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj": {
-              "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj"
+            "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj": {
+              "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj"
             }
           }
         }

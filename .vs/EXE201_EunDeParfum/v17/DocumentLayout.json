@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\",
+  "WorkspaceRootPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\software\\ky8\\exe201\\exe201_eundeparfum\\eundeparfum_service\\service\\implement\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\software\\ky8\\exe201\\exe202_be\\eundeparfum_service\\service\\implement\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\productsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\software\\ky8\\exe201\\exe201_eundeparfum\\exe201_eundeparfum\\appstarts\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\software\\ky8\\exe201\\exe202_be\\exe201_eundeparfum\\appstarts\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\appstarts\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\software\\ky8\\exe201\\exe201_eundeparfum\\exe201_eundeparfum\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|d:\\software\\ky8\\exe201\\exe202_be\\exe201_eundeparfum\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\appstarts\\dependencyinjectioncontainers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|d:\\software\\ky8\\exe201\\exe201_eundeparfum\\eundeparfum_service\\service\\implement\\questionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\questionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Bookmark",
@@ -109,12 +105,16 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ProductsService.cs",
-              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
+              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
-              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
+              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
               "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\ProductsService.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAnwGMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -125,33 +125,31 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MappingProfile.cs",
-              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
+              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
-              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
+              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
               "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAzwD8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T17:15:22.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T17:15:22.843Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "DependencyInjectionContainers.cs",
-              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
+              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
-              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
+              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
               "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACgAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T17:10:28.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T17:10:28.9Z"
             }
           ]
         },
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -160,19 +158,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QuestionsService.cs",
-              "DocumentMoniker": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
-              "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
-              "ToolTip": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE201_EunDeParfum\\EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
-              "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\QuestionsService.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAgwGAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T17:11:19.551Z",
-              "EditorCaption": ""
             }
           ]
         },
