@@ -174,6 +174,40 @@ namespace EunDeParfum_Service.Service.Implement
             }
         }
 
+        public async Task<DynamicResponse<ProductResponseModel>> GetProductsByCategoryId(int categoryId)
+        {
+            try
+            {
+                var listProduct = await _productRepository.GetProductsByCategoryId(categoryId);
+
+                var result = _mapper.Map<List<ProductResponseModel>>(listProduct);
+
+                return new DynamicResponse<ProductResponseModel>()
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = null,
+
+                    Data = new MegaData<ProductResponseModel>()
+                    {
+                        PageInfo = null,
+                        SearchInfo = null,
+                        PageData = result
+                    }
+                };
+            }
+            catch(Exception ex)
+            {
+                return new DynamicResponse<ProductResponseModel>()
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = "Server Error!",
+                    Data = null
+                };
+            }
+        }
+
         public async Task<BaseResponse<ProductResponseModel>> UpdateProductAsync(CreateProductRequestModel model, int id)
         {
             try

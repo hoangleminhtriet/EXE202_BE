@@ -45,6 +45,20 @@ namespace EXE201_EunDeParfum.Controllers
             }
         }
 
+        [HttpGet("GetProductByCategory/{id}")]
+        public async Task<IActionResult> GetProductsByCategoryId(int id)
+        {
+            try
+            {
+                var result = await _productsService.GetProductsByCategoryId(id);
+                return StatusCode(result.Code,result);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         [Authorize(Roles = "Admin, Manager")]
         [HttpPost("CreateProduct")]
         public async Task<IActionResult> CreateProduct([FromForm]CreateProductRequestModel model)

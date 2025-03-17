@@ -66,6 +66,14 @@ namespace EunDeParfum_Repository.Repository.Implement
             }
         }
 
+        public async Task<List<Product>> GetProductsByCategoryId(int categoryId)
+        {
+            return await _context.Products
+            .Where(p => _context.ProductCategories
+                .Any(pc => pc.ProductId == p.ProductId && pc.CategoryId == categoryId))
+            .ToListAsync();
+        }
+
         public async Task<bool> UpdateProductAsync(Product product)
         {
             try

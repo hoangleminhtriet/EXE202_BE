@@ -18,5 +18,6 @@ namespace EunDeParfum_Service.Service.Interface
         Task<BaseResponse<ProductResponseModel>> DeleteProductAsync(int productId, bool status);
         Task<BaseResponse<ProductResponseModel>> GetProductById(int productId);
         Task<DynamicResponse<ProductResponseModel>> GetAllProduct(GetAllProductRequestModel model);
+        Task<DynamicResponse<ProductResponseModel>> GetProductsByCategoryId(int categoryId);
     }
 }

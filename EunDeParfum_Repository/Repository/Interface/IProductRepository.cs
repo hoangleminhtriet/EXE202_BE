@@ -14,5 +14,6 @@ namespace EunDeParfum_Repository.Repository.Interface
         Task<bool> DeleteProductAsync(int productId);
         Task<Product> GetProductByIdAsync(int id);
         Task<List<Product>> GetAllProductAsync();
+        Task<List<Product>> GetProductsByCategoryId(int categoryId);
     }
 }
