@@ -1,0 +1,15 @@
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\bin\Release\net6.0\EunDeParfum_Repository.deps.json
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\bin\Release\net6.0\EunDeParfum_Repository.runtimeconfig.json
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\bin\Release\net6.0\EunDeParfum_Repository.dll
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\bin\Release\net6.0\EunDeParfum_Repository.pdb
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\EunDeParfum_Repository.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\EunDeParfum_Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\EunDeParfum_Repository.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\EunDeParfum_Repository.AssemblyInfo.cs
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\EunDeParfum_Repository.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\EunDeParfum_Repository.sourcelink.json
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\EunDeParfum_Repository.dll
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\refint\EunDeParfum_Repository.dll
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\EunDeParfum_Repository.pdb
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\EunDeParfum_Repository.genruntimeconfig.cache
+C:\Users\USER\Desktop\EXE202_BE\EunDeParfum_Repository\obj\Release\net6.0\ref\EunDeParfum_Repository.dll

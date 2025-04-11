@@ -777,6 +777,15 @@
           }
         }
       },
+      "QRCoder/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/QRCoder.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/QRCoder.dll": {}
+        }
+      },
       "Stripe.net/47.3.0": {
         "type": "package",
         "dependencies": {
@@ -1386,6 +1395,7 @@
           "EunDeParfum_Repository": "1.0.0",
           "Google.Apis.Auth": "1.68.0",
           "Microsoft.EntityFrameworkCore": "6.0.36",
+          "QRCoder": "1.5.0",
           "System.Security.Claims": "4.3.0",
           "X.PagedList": "10.2.1"
         },
@@ -2716,6 +2726,27 @@
         "newtonsoft.json.13.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "QRCoder/1.5.0": {
+      "sha512": "z1xaJ1BsYdSstpuKWgT3ND9Ryt7gd9RdBvcLemP3Dz8CrPPeuyhn2KlD8J1x1V4OhuAsAFcZRmxB7vte7CQkfQ==",
+      "type": "package",
+      "path": "qrcoder/1.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/QRCoder.dll",
+        "lib/net40/QRCoder.dll",
+        "lib/net5.0-windows7.0/QRCoder.dll",
+        "lib/net5.0/QRCoder.dll",
+        "lib/net6.0-windows7.0/QRCoder.dll",
+        "lib/net6.0/QRCoder.dll",
+        "lib/netstandard1.3/QRCoder.dll",
+        "lib/netstandard2.0/QRCoder.dll",
+        "nuget-icon.png",
+        "nuget-readme.md",
+        "qrcoder.1.5.0.nupkg.sha512",
+        "qrcoder.nuspec"
       ]
     },
     "Stripe.net/47.3.0": {
@@ -4256,11 +4287,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\EXE202_BE\\EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj",
       "projectName": "EXE201_EunDeParfum",
-      "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj",
+      "projectPath": "C:\\Users\\USER\\Desktop\\EXE202_BE\\EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EXE201_EunDeParfum\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\EXE202_BE\\EXE201_EunDeParfum\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4278,11 +4309,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj": {
-              "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj"
+            "C:\\Users\\USER\\Desktop\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj": {
+              "projectPath": "C:\\Users\\USER\\Desktop\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj"
             },
-            "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj": {
-              "projectPath": "D:\\SOFTWARE\\Ky8\\EXE201\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj"
+            "C:\\Users\\USER\\Desktop\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj": {
+              "projectPath": "C:\\Users\\USER\\Desktop\\EXE202_BE\\EunDeParfum_Service\\EunDeParfum_Service.csproj"
             }
           }
         }

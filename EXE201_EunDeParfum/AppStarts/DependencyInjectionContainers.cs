@@ -36,6 +36,7 @@ namespace EXE201_EunDeParfum.AppStarts
             services.AddScoped<IProductRecommendationService, ProductRecommendationService>();
             services.AddScoped<IOderService, OdersService>();
             services.AddScoped<IOrderDetailService, OrderDetailService>();
+            services.AddScoped<IPaymentService, PaymentsService>();
 
             // AddRepository
             services.AddScoped<ICustomerRepository, CustomerRepository>();

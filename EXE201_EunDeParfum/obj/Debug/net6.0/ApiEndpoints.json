@@ -560,6 +560,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.PaymentController",
+    "Method": "GenerateQr",
+    "RelativePath": "api/payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EunDeParfum_Service.RequestModel.VIETQR.VietQrRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EXE201_EunDeParfum.Controllers.ProductRecommendationController",
     "Method": "CreateProductRecommendation",
     "RelativePath": "api/product-recommendations",
