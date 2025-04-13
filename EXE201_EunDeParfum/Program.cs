@@ -1,4 +1,4 @@
-using EunDeParfum_Repository.DbContexts;
+﻿using EunDeParfum_Repository.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using EunDeParfum_Repository;
 using EXE201_EunDeParfum.AppStarts;
@@ -28,6 +28,12 @@ builder.Services.AddCors(options =>
         .AllowAnyHeader()
         );
 });
+
+//builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+//);
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

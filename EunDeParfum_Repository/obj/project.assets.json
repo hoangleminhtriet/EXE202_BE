@@ -2707,19 +2707,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USER\\.nuget\\packages\\": {}
+    "C:\\Users\\hungv\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj",
+      "projectUniqueName": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj",
       "projectName": "EunDeParfum_Repository",
-      "projectPath": "C:\\Users\\USER\\Desktop\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj",
-      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\EXE202_BE\\EunDeParfum_Repository\\obj\\",
+      "projectPath": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\EunDeParfum_Repository.csproj",
+      "packagesPath": "C:\\Users\\hungv\\.nuget\\packages\\",
+      "outputPath": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hungv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
