@@ -12,5 +12,6 @@ namespace EunDeParfum_Repository.Repository.Interface
         Task<ProductCategory> GetProductCategoryAsync(int productId, int categoryId);
         Task<List<ProductCategory>> GetCategoriesByProductIdAsync(int productId);
         Task<List<ProductCategory>> GetProductsByCategoryIdAsync(int categoryId);
+        Task<List<ProductCategory>> GetAllProductCategoriesAsync();
     }
 }

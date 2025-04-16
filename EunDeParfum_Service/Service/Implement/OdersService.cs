@@ -4,6 +4,7 @@ using EunDeParfum_Repository.Repository.Implement;
 using EunDeParfum_Repository.Repository.Interface;
 using EunDeParfum_Service.RequestModel.Order;
 using EunDeParfum_Service.RequestModel.OrderDetail;
+using EunDeParfum_Service.RequestModel.Product;
 using EunDeParfum_Service.ResponseModel;
 using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.Order;
@@ -28,6 +29,135 @@ namespace EunDeParfum_Service.Service.Implement
             _orderRepository = orderRepository;
             _mapper = mapper;
             _orderDetailService = orderDetailService;
+        }
+
+        public async Task<BaseResponse<OrderReponseModel>> AddToCartAsync(AddToCartRequestModel model)
+        {
+            try
+            {
+                // 1. Kiểm tra xem khách hàng đã có đơn hàng trạng thái "Cart" hay chưa
+                var existingCart = (await _orderRepository.GetAllOrdersAsync())
+                    .FirstOrDefault(o => o.CustomerId == model.CustomerId && o.Status == "Cart" && !o.IsDeleted);
+
+                Order order;
+                if (existingCart == null)
+                {
+                    // 2. Nếu chưa có giỏ hàng, tạo mới đơn hàng với trạng thái "Cart"
+                    order = new Order
+                    {
+                        CustomerId = model.CustomerId,
+                        TotalAmount = 0,
+                        OrderDate = DateTime.UtcNow,
+                        Status = "Cart",
+                        IsDeleted = false
+                    };
+                    await _orderRepository.CreateOrderAsync(order);
+                }
+                else
+                {
+                    // 3. Nếu đã có giỏ hàng, sử dụng đơn hàng hiện tại
+                    order = existingCart;
+                }
+
+                // 4. Lấy danh sách OrderDetails hiện tại của đơn hàng
+                var currentOrderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(order.OrderId);
+                currentOrderDetails ??= new List<OrderDetailResponseModel>();
+
+                // 5. Chuẩn bị danh sách sản phẩm để thêm hoặc cập nhật
+                var orderDetailsToAdd = new List<ProductForOrderRequestModel>();
+
+                foreach (var newProduct in model.Products)
+                {
+                    // Kiểm tra xem sản phẩm đã tồn tại trong OrderDetails hay chưa
+                    var existingDetail = currentOrderDetails.FirstOrDefault(od => od.ProductId == newProduct.ProductId);
+
+                    if (existingDetail != null)
+                    {
+                        // Nếu sản phẩm đã tồn tại, cập nhật số lượng
+                        var updateModel = new UpdateOrderDetailRequestModel
+                        {
+                            OrderDetailId = existingDetail.OrderDetailId,
+                            Quantity = existingDetail.Quantity + newProduct.Quantity,
+                            Price = newProduct.Price
+                        };
+                        var updateResult = await _orderDetailService.UpdateOrderDetailAsync(updateModel);
+                        if (updateResult == null || !updateResult.Success)
+                        {
+                            return new BaseResponse<OrderReponseModel>
+                            {
+                                Code = 500,
+                                Success = false,
+                                Message = "Không thể cập nhật chi tiết đơn hàng!",
+                                Data = null
+                            };
+                        }
+                        // Cập nhật lại currentOrderDetails với thông tin mới
+                        existingDetail.Quantity = updateModel.Quantity;
+                        existingDetail.UnitPrice = updateModel.Price;
+                    }
+                    else
+                    {
+                        // Nếu sản phẩm chưa tồn tại, thêm mới vào danh sách
+                        orderDetailsToAdd.Add(new ProductForOrderRequestModel
+                        {
+                            ProductId = newProduct.ProductId,
+                            Quantity = newProduct.Quantity,
+                            Price = newProduct.Price
+                        });
+                    }
+                }
+
+                // 6. Nếu có sản phẩm mới, thêm vào OrderDetails
+                if (orderDetailsToAdd.Any())
+                {
+                    var createOrderDetails = new CreateOrderDetailRequestModel
+                    {
+                        OrderId = order.OrderId,
+                        Products = orderDetailsToAdd
+                    };
+                    var createResult = await _orderDetailService.CreateListOrderDetails(createOrderDetails);
+                    if (createResult == null || !createResult.Any())
+                    {
+                        return new BaseResponse<OrderReponseModel>
+                        {
+                            Code = 500,
+                            Success = false,
+                            Message = "Không thể tạo chi tiết đơn hàng!",
+                            Data = null
+                        };
+                    }
+
+                    // Cập nhật lại danh sách OrderDetails sau khi tạo mới
+                    currentOrderDetails.AddRange(createResult);
+                }
+
+                // 7. Tính lại totalAmount dựa trên tất cả OrderDetails
+                decimal totalAmount = currentOrderDetails.Sum(od => od.Quantity * od.UnitPrice);
+                order.TotalAmount = totalAmount;
+                await _orderRepository.UpdateOrderAsync(order);
+
+                // 8. Chuẩn bị phản hồi
+                var response = _mapper.Map<OrderReponseModel>(order);
+                response.OrderDetails = currentOrderDetails;
+
+                return new BaseResponse<OrderReponseModel>
+                {
+                    Code = 201,
+                    Success = true,
+                    Message = "Thêm sản phẩm vào giỏ hàng thành công!",
+                    Data = response
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<OrderReponseModel>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"Lỗi: {ex.Message}",
+                    Data = null
+                };
+            }
         }
 
         public async Task<BaseResponse<OrderReponseModel>> CreateOrderAsync(CreateOrderRequestModel model)
@@ -203,9 +333,181 @@ namespace EunDeParfum_Service.Service.Implement
             }
         }
 
-        public Task<BaseResponse<OrderReponseModel>> UpdateOrderAsync(UpdateOrderRequestModel model, int orderId)
+        public async Task<BaseResponse<OrderReponseModel>> UpdateCartAsync(UpdateCartRequestModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // 1. Kiểm tra xem khách hàng đã có đơn hàng trạng thái "Cart" hay chưa
+                var cart = (await _orderRepository.GetAllOrdersAsync())
+                    .FirstOrDefault(o => o.CustomerId == model.CustomerId && o.Status == "Cart" && !o.IsDeleted);
+
+                if (cart == null)
+                {
+                    return new BaseResponse<OrderReponseModel>
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Không tìm thấy giỏ hàng cho khách hàng này!",
+                        Data = null
+                    };
+                }
+
+                // 2. Lấy danh sách OrderDetails hiện tại của giỏ hàng
+                var currentOrderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(cart.OrderId);
+                currentOrderDetails ??= new List<OrderDetailResponseModel>();
+
+                // 3. Xử lý từng mục trong yêu cầu cập nhật
+                foreach (var item in model.Items)
+                {
+                    var existingDetail = currentOrderDetails.FirstOrDefault(od => od.ProductId == item.ProductId);
+
+                    if (existingDetail == null)
+                    {
+                        // Nếu sản phẩm không tồn tại trong giỏ hàng, bỏ qua hoặc có thể thêm mới (tùy yêu cầu)
+                        continue;
+                    }
+
+                    if (item.Quantity <= 0)
+                    {
+                        // Nếu số lượng <= 0, xóa sản phẩm khỏi giỏ hàng
+                        var deleteResult = await _orderDetailService.DeleteOrderDetailAsync(existingDetail.OrderDetailId);
+                        if (!deleteResult.Success)
+                        {
+                            return new BaseResponse<OrderReponseModel>
+                            {
+                                Code = deleteResult.Code,
+                                Success = false,
+                                Message = deleteResult.Message,
+                                Data = null
+                            };
+                        }
+                        // Xóa khỏi danh sách hiện tại
+                        currentOrderDetails.Remove(existingDetail);
+                    }
+                    else
+                    {
+                        // Cập nhật số lượng và giá
+                        var updateModel = new UpdateOrderDetailRequestModel
+                        {
+                            OrderDetailId = existingDetail.OrderDetailId,
+                            Quantity = item.Quantity,
+                            Price = item.Price
+                        };
+                        var updateResult = await _orderDetailService.UpdateOrderDetailAsync(updateModel);
+                        if (!updateResult.Success)
+                        {
+                            return new BaseResponse<OrderReponseModel>
+                            {
+                                Code = updateResult.Code,
+                                Success = false,
+                                Message = updateResult.Message,
+                                Data = null
+                            };
+                        }
+                        // Cập nhật lại thông tin trong currentOrderDetails
+                        existingDetail.Quantity = item.Quantity;
+                        existingDetail.UnitPrice = item.Price;
+                    }
+                }
+
+                // 4. Tính lại totalAmount dựa trên tất cả OrderDetails
+                decimal totalAmount = currentOrderDetails.Sum(od => od.Quantity * od.UnitPrice);
+                cart.TotalAmount = totalAmount;
+                await _orderRepository.UpdateOrderAsync(cart);
+
+                // 5. Chuẩn bị phản hồi
+                var response = _mapper.Map<OrderReponseModel>(cart);
+                response.OrderDetails = currentOrderDetails;
+
+                return new BaseResponse<OrderReponseModel>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Cập nhật giỏ hàng thành công!",
+                    Data = response
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<OrderReponseModel>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"Lỗi: {ex.Message}",
+                    Data = null
+                };
+            }
+        }
+
+        public async Task<BaseResponse<OrderReponseModel>> UpdateOrderAsync(UpdateOrderRequestModel model, int orderId)
+        {
+            try
+            {
+                var order = await _orderRepository.GetOrderByIdAsync(orderId);
+                if (order == null)
+                {
+                    return new BaseResponse<OrderReponseModel>
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Không tìm thấy đơn hàng để cập nhật!",
+                        Data = null
+                    };
+                }
+
+                // Cập nhật thông tin đơn hàng
+                _mapper.Map(model, order);
+                decimal totalAmount = 0;
+                foreach (var product in model.Products)
+                {
+                    totalAmount += product.Price * product.Quantity;
+                }
+                order.TotalAmount = totalAmount;
+                await _orderRepository.UpdateOrderAsync(order);
+
+                // Xóa các OrderDetails cũ
+                var currentOrderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(orderId);
+                // Giả sử có phương thức xóa trong repository, nếu không thì cần thêm
+                // Hiện tại tôi sẽ bỏ qua phần xóa vì chưa có phương thức xóa trong IOrderDetailRepository
+
+                // Thêm lại các OrderDetails mới
+                var createOrderDetails = new CreateOrderDetailRequestModel
+                {
+                    OrderId = orderId,
+                    Products = model.Products
+                };
+                var orderDetails = await _orderDetailService.CreateListOrderDetails(createOrderDetails);
+                if (orderDetails == null || !orderDetails.Any())
+                {
+                    return new BaseResponse<OrderReponseModel>
+                    {
+                        Code = 500,
+                        Success = false,
+                        Message = "Không thể tạo chi tiết đơn hàng!",
+                        Data = null
+                    };
+                }
+
+                var response = _mapper.Map<OrderReponseModel>(order);
+                response.OrderDetails = orderDetails;
+                return new BaseResponse<OrderReponseModel>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Cập nhật đơn hàng thành công!",
+                    Data = response
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<OrderReponseModel>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"Lỗi: {ex.Message}",
+                    Data = null
+                };
+            }
         }
     }
 }

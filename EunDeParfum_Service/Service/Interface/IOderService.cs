@@ -16,5 +16,8 @@ namespace EunDeParfum_Service.Service.Interface
         Task<BaseResponse<OrderReponseModel>> DeleteOrderAsync(int orderId, bool status);
         Task<BaseResponse<OrderReponseModel>> GetOrderByIdAsync(int orderId);
         Task<DynamicResponse<OrderReponseModel>> GetAllOrdersAsync(GetAllOrderRequestModel model);
+        Task<BaseResponse<OrderReponseModel>> AddToCartAsync(AddToCartRequestModel model);
+        Task<BaseResponse<OrderReponseModel>> UpdateCartAsync(UpdateCartRequestModel model);
+
     }
 }

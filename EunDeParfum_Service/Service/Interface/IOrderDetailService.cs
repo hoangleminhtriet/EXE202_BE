@@ -1,4 +1,5 @@
 ﻿using EunDeParfum_Service.RequestModel.OrderDetail;
+using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.OrderDetail;
 using System;
 using System.Collections.Generic;
@@ -11,8 +12,10 @@ namespace EunDeParfum_Service.Service.Interface
     public interface IOrderDetailService
     {
         Task<List<OrderDetailResponseModel>> CreateListOrderDetails(CreateOrderDetailRequestModel model);
-        Task<List<OrderDetailResponseModel>> GetOrderDetailByIdAsync(int orderDetailId);
+        Task<BaseResponse<OrderDetailResponseModel>> GetOrderDetailByIdAsync(int orderDetailId);
         Task<List<OrderDetailResponseModel>> GetListOrderDetailsByOrderId(int orderId);
         Task<List<OrderDetailResponseModel>> GetListOrderDetailsByListOrderIds(List<int> orderIds);
+        Task<BaseResponse<OrderDetailResponseModel>> UpdateOrderDetailAsync(UpdateOrderDetailRequestModel model);
+        Task<BaseResponse<bool>> DeleteOrderDetailAsync(int orderDetailId);
     }
 }

@@ -513,6 +513,64 @@
   },
   {
     "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "UpdateOrder",
+    "RelativePath": "api/order/{orderId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Order.UpdateOrderRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "DeleteOrder",
+    "RelativePath": "api/order/{orderId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "AddToCart",
+    "RelativePath": "api/order/add-to-cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Order.AddToCartRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
     "Method": "Create",
     "RelativePath": "api/order/create",
     "HttpMethod": "POST",
@@ -554,6 +612,54 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "UpdateOrderDetail",
+    "RelativePath": "api/order/order-details",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.OrderDetail.UpdateOrderDetailRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "GetOrderDetailById",
+    "RelativePath": "api/order/order-details/{orderDetailId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderDetailId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "UpdateCart",
+    "RelativePath": "api/order/update-cart",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Order.UpdateCartRequestModel",
         "IsRequired": true
       }
     ],
@@ -869,6 +975,22 @@
       {
         "Name": "model",
         "Type": "EunDeParfum_Service.RequestModel.ProductCategory.DeleteProductCategoryRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.ProductCategoryController",
+    "Method": "GetAllProductCategories",
+    "RelativePath": "api/productcategory/getallproductcategories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.ProductCate.GetAllProductCategoriesRequestModel",
         "IsRequired": true
       }
     ],

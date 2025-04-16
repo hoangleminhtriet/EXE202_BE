@@ -3,6 +3,7 @@ using EunDeParfum_Repository.Models;
 using EunDeParfum_Repository.Repository.Implement;
 using EunDeParfum_Repository.Repository.Interface;
 using EunDeParfum_Service.RequestModel.OrderDetail;
+using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.OrderDetail;
 using EunDeParfum_Service.Service.Interface;
 using Newtonsoft.Json.Bson;
@@ -47,6 +48,42 @@ namespace EunDeParfum_Service.Service.Implement
             return response;
         }
 
+        public async Task<BaseResponse<bool>> DeleteOrderDetailAsync(int orderDetailId)
+        {
+            try
+            {
+                var success = await _orderDetailRepository.DeleteOrderDetailAsync(orderDetailId);
+                if (!success)
+                {
+                    return new BaseResponse<bool>
+                    {
+                        Code = 500,
+                        Success = false,
+                        Message = "Không thể xóa chi tiết đơn hàng!",
+                        Data = false
+                    };
+                }
+
+                return new BaseResponse<bool>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Xóa chi tiết đơn hàng thành công!",
+                    Data = true
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<bool>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"Lỗi: {ex.Message}",
+                    Data = false
+                };
+            }
+        }
+
         public async Task<List<OrderDetailResponseModel>> GetListOrderDetailsByListOrderIds(List<int> orderIds)
         {
             if (orderIds == null || !orderIds.Any()) return new List<OrderDetailResponseModel>();
@@ -63,9 +100,86 @@ namespace EunDeParfum_Service.Service.Implement
             return _mapper.Map<List<OrderDetailResponseModel>>(orderDetails);
         }
 
-        public Task<List<OrderDetailResponseModel>> GetOrderDetailByIdAsync(int orderDetailId)
+        public async Task<BaseResponse<OrderDetailResponseModel>> GetOrderDetailByIdAsync(int orderDetailId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var orderDetail = await _orderDetailRepository.GetOrderDetailByIdAsync(orderDetailId);
+                if (orderDetail == null)
+                {
+                    return new BaseResponse<OrderDetailResponseModel>
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Không tìm thấy chi tiết đơn hàng!",
+                        Data = null
+                    };
+                }
+
+                var response = _mapper.Map<OrderDetailResponseModel>(orderDetail);
+
+                return new BaseResponse<OrderDetailResponseModel>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Lấy chi tiết đơn hàng thành công!",
+                    Data = response
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<OrderDetailResponseModel>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"Lỗi: {ex.Message}",
+                    Data = null
+                };
+            }
+        }
+
+        public async Task<BaseResponse<OrderDetailResponseModel>> UpdateOrderDetailAsync(UpdateOrderDetailRequestModel model)
+        {
+            try
+            {
+                var orderDetail = await _orderDetailRepository.GetOrderDetailByIdAsync(model.OrderDetailId);
+                if (orderDetail == null)
+                {
+                    return new BaseResponse<OrderDetailResponseModel>
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Không tìm thấy chi tiết đơn hàng để cập nhật!",
+                        Data = null
+                    };
+                }
+
+                // Cập nhật thông tin
+                orderDetail.Quantity = model.Quantity;
+                orderDetail.UnitPrice = model.Price;
+
+                await _orderDetailRepository.UpdateOrderDetailAsync(orderDetail);
+
+                var response = _mapper.Map<OrderDetailResponseModel>(orderDetail);
+
+                return new BaseResponse<OrderDetailResponseModel>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Cập nhật chi tiết đơn hàng thành công!",
+                    Data = response
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<OrderDetailResponseModel>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"Lỗi: {ex.Message}",
+                    Data = null
+                };
+            }
         }
     }
 }

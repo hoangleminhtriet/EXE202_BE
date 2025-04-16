@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using EunDeParfum_Repository.Models;
 using EunDeParfum_Repository.Repository.Interface;
+using EunDeParfum_Service.RequestModel.ProductCate;
 using EunDeParfum_Service.RequestModel.ProductCategory;
 using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.ProductCategory;
@@ -204,5 +205,34 @@ namespace EunDeParfum_Service.Service.Implement
                 };
             }
         }
+        public async Task<DynamicResponse<ProductCategoryResponseModel>> GetAllProductCategoriesAsync(GetAllProductCategoriesRequestModel model)
+        {
+            try
+            {
+                var list = await _productCategoryRepository.GetAllProductCategoriesAsync();
+                var mappedList = _mapper.Map<List<ProductCategoryResponseModel>>(list);
+                return new DynamicResponse<ProductCategoryResponseModel>()
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = null,
+                    Data = new MegaData<ProductCategoryResponseModel>()
+                    {
+                        PageData = mappedList
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                return new DynamicResponse<ProductCategoryResponseModel>()
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = "Server Error!",
+                    Data = null
+                };
+            }
+        }
+
     }
 }

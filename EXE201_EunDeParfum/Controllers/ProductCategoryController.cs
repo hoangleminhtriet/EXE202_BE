@@ -1,4 +1,5 @@
-﻿using EunDeParfum_Service.RequestModel.ProductCategory;
+﻿using EunDeParfum_Service.RequestModel.ProductCate;
+using EunDeParfum_Service.RequestModel.ProductCategory;
 using EunDeParfum_Service.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +17,20 @@ namespace EXE201_EunDeParfum.Controllers
         public ProductCategoryController(IProductCategoryService productCategoryService)
         {
             _productCategoryService = productCategoryService;
+        }
+
+        [HttpPost("GetAllProductCategories")]
+        public async Task<IActionResult> GetAllProductCategories(GetAllProductCategoriesRequestModel model)
+        {
+            try
+            {
+                var result = await _productCategoryService.GetAllProductCategoriesAsync(model);
+                return StatusCode(result.Code, result);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         [HttpPost("SearchByProductId/{productId}")]

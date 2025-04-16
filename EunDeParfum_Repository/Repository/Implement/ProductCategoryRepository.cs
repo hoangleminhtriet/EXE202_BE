@@ -81,5 +81,9 @@ namespace EunDeParfum_Repository.Repository.Implement
                 .Where(pc => pc.CategoryId == categoryId)
                 .ToListAsync();
         }
+        public async Task<List<ProductCategory>> GetAllProductCategoriesAsync()
+        {
+            return await _context.ProductCategories.ToListAsync();
+        }
     }
 }
