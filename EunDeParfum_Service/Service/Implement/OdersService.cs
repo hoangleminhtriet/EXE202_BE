@@ -240,12 +240,8 @@ namespace EunDeParfum_Service.Service.Implement
                 var totalItemCount = orders.Count();
                 var totalPages = (int)Math.Ceiling((double)totalItemCount / model.pageSize);
 
-
-
-
-
                 // 4️⃣ Lấy toàn bộ OrderDetails theo danh sách OrderId
-                var orderIds = orders.Select(o => o.OrderId).ToList();
+                var orderIds = pageOrders.Select(o => o.OrderId).ToList(); // Chỉ lấy OrderDetails cho các đơn hàng trong trang hiện tại
                 var allOrderDetails = await _orderDetailService.GetListOrderDetailsByListOrderIds(orderIds);
 
                 // 5️⃣ Chuyển OrderDetails thành Dictionary (Key: OrderId, Value: List<OrderDetailResponseModel>)
@@ -253,13 +249,14 @@ namespace EunDeParfum_Service.Service.Implement
                     .GroupBy(od => od.OrderId)
                     .ToDictionary(g => g.Key, g => g.ToList());
 
-                // 6️⃣  Chuyển dữ liệu sang Dictionary<OrderId, OrderReponseModel>
-                var responseList = pageOrders.Select(order => new OrderReponseModel
+                // 6️⃣ Chuyển dữ liệu sang List<OrderReponseModel> bằng AutoMapper
+                var responseList = pageOrders.Select(order =>
                 {
-                    OrderId = order.OrderId,
-                    TotalAmount = order.TotalAmount,
-                    OrderDate = order.OrderDate,
-                    OrderDetails = orderDetailsDict.ContainsKey(order.OrderId) ? orderDetailsDict[order.OrderId] : new List<OrderDetailResponseModel>()
+                    var response = _mapper.Map<OrderReponseModel>(order);
+                    response.OrderDetails = orderDetailsDict.ContainsKey(order.OrderId)
+                        ? orderDetailsDict[order.OrderId]
+                        : new List<OrderDetailResponseModel>();
+                    return response;
                 }).ToList();
 
                 // 7️⃣ Tạo MegaData<OrderResponseModel>
@@ -276,7 +273,7 @@ namespace EunDeParfum_Service.Service.Implement
                     },
                     SearchInfo = new SearchCondition()
                     {
-                        keyWord = null, // Bạn có thể thêm nếu cần tìm kiếm theo keyword
+                        keyWord = null,
                         role = null,
                         status = null,
                         is_Verify = null,
