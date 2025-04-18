@@ -3,6 +3,7 @@ using EunDeParfum_Service.RequestModel.VIETQR;
 using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.Payment;
 using EunDeParfum_Service.ResponseModel.VIETQR;
+using Net.payOS.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +20,7 @@ namespace EunDeParfum_Service.Service.Interface
         Task<BaseResponse<PaymentResponseModel>> GetPaymentByIdAsync(int paymentId);
         Task<DynamicResponse<PaymentResponseModel>> GetAllPaymentsAsync(GetAllPaymentRequestModel model);
         Task<DynamicResponse<PaymentResponseModel>> GetPaymentsByStatusAsync(string status);
+        Task<BaseResponse<bool>> HandlePaymentWebhookAsync(WebhookType webhookType);
+        Task<BaseResponse<PaymentResponseModel>> GetPaymentByTransactionIdAsync(string transactionId);
     }
 }

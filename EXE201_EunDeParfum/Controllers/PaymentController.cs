@@ -2,6 +2,7 @@
 using EunDeParfum_Service.RequestModel.VIETQR;
 using EunDeParfum_Service.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
+using Net.payOS.Types;
 
 namespace EXE201_EunDeParfum.Controllers
 {
@@ -70,6 +71,19 @@ namespace EXE201_EunDeParfum.Controllers
                 throw new Exception("Error retrieving all payments", ex);
             }
         }
+        [HttpGet("GetByTransactionId/{transactionId}")]
+        public async Task<IActionResult> GetPaymentByTransactionId(string transactionId)
+        {
+            try
+            {
+                var result = await _paymentService.GetPaymentByTransactionIdAsync(transactionId);
+                return StatusCode(result.Code, result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving payment by transaction ID", ex);
+            }
+        }
 
         [HttpGet("GetPaymentsByStatus")]
         public async Task<IActionResult> GetPaymentsByStatus([FromQuery] string status)
@@ -83,6 +97,12 @@ namespace EXE201_EunDeParfum.Controllers
             {
                 throw ex;
             }
+        }
+        [HttpPost("webhook")]
+        public async Task<IActionResult> HandleWebhook([FromBody] WebhookType webhookType)
+        {
+            var result = await _paymentService.HandlePaymentWebhookAsync(webhookType);
+            return StatusCode(result.Code, result);
         }
     }
 }

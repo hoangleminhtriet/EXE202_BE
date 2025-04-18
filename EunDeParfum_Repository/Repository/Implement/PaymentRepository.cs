@@ -47,6 +47,12 @@ namespace EunDeParfum_Repository.Repository.Implement
                 .FirstOrDefaultAsync(p => p.PaymentId == paymentId);
         }
 
+        public async Task<Payment> GetPaymentByTransactionIdAsync(string transactionId)
+        {
+            return await _context.Payments
+                .FirstOrDefaultAsync(p => p.TransactionId == transactionId);
+        }
+
         // Thay vì truyền string status, ta nên truyền bool?
         public async Task<List<Payment>> GetPaymentsByStatusAsync(string status)
         {

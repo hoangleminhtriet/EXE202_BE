@@ -97,11 +97,15 @@ namespace EXE201_EunDeParfum.AppStarts
             CreateMap<UpdateOrderRequestModel, Order>().ReverseMap();
             CreateMap<AddToCartRequestModel, Order>().ReverseMap();
             CreateMap<UpdateCartRequestModel, Order>().ReverseMap();
+            CreateMap<RemoveCartItemsRequestModel, Order>().ReverseMap();
 
             //OrderDetail
             CreateMap<OrderDetailResponseModel, OrderDetail>().ReverseMap();
             CreateMap<OrderDetail, OrderDetailResponseModel>()
                 .ForMember(dest => dest.ProductName, opt => opt.Ignore());
+            CreateMap<ProductForOrderRequestModel, OrderDetail>()
+            .ForMember(dest => dest.OrderId, opt => opt.Ignore())
+            .ForMember(dest => dest.OrderDetailId, opt => opt.Ignore());
 
 
             // Ánh xạ VietQrRequest → VietQrResponse

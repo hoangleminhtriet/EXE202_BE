@@ -26,13 +26,15 @@ namespace EunDeParfum_Service.Service.Implement
         private readonly IMapper _mapper;
         private readonly IOrderRepository _orderRepository;
         private readonly PayOsService _payOsService;
+        private readonly IOrderDetailService _orderDetailService;
 
-        public PaymentsService(IPaymentRepository paymentRepository, IMapper mapper, IOrderRepository orderRepository, PayOsService payOsService)
+        public PaymentsService(IPaymentRepository paymentRepository, IMapper mapper, IOrderRepository orderRepository, PayOsService payOsService, IOrderDetailService orderDetailService)
         {
             _paymentRepository = paymentRepository;
             _mapper = mapper;
             _orderRepository = orderRepository;
             _payOsService = payOsService;
+            _orderDetailService = orderDetailService;
         }
         public async Task<BaseResponse<PaymentResponseModel>> CreatePaymentAsync(CreatePaymentRequestModel model)
         {
@@ -59,8 +61,8 @@ namespace EunDeParfum_Service.Service.Implement
                 {
                     checkoutUrl = await GeneratePaymentLinkForOrderAsync(order.OrderId);
                     var paymentLinkId = checkoutUrl.Split('/').Last();
-                    payment.TransactionId = paymentLinkId; // Lưu paymentLinkId
-                    payment.Status = "Pending";
+                    payment.TransactionId = paymentLinkId;
+                    payment.Status = "Paid";
                 }
                 else
                 {
@@ -69,8 +71,42 @@ namespace EunDeParfum_Service.Service.Implement
 
                 await _paymentRepository.CreatePaymentAsync(payment);
 
+                // Cập nhật trạng thái Order thành Paid nếu thanh toán bằng cash
+                if (model.PaymentMethod?.ToLower() == "cash")
+                {
+                    order.Status = "Paid";
+                    await _orderRepository.UpdateOrderAsync(order);
+                }
+
+                // Xóa OrderDetails đã thanh toán khỏi giỏ hàng
+                var cartOrder = await _orderRepository.GetCartOrderByCustomerIdAsync(order.CustomerId);
+                if (cartOrder != null)
+                {
+                    var cartDetails = await _orderDetailService.GetListOrderDetailsByOrderId(cartOrder.OrderId);
+                    var orderDetailsToRemove = cartDetails
+                        .Where(od => order.OrderDetails.Any(newOd => newOd.ProductId == od.ProductId && newOd.Quantity == od.Quantity))
+                        .Select(od => od.OrderDetailId)
+                        .ToList();
+                    if (orderDetailsToRemove.Any())
+                    {
+                        await _orderDetailService.RemoveOrderDetailsAsync(cartOrder.OrderId, orderDetailsToRemove);
+                    }
+
+                    // Cập nhật TotalAmount của giỏ hàng hoặc xóa nếu trống
+                    var remainingDetails = await _orderDetailService.GetListOrderDetailsByOrderId(cartOrder.OrderId);
+                    if (!remainingDetails.Any())
+                    {
+                        cartOrder.IsDeleted = true;
+                    }
+                    else
+                    {
+                        cartOrder.TotalAmount = remainingDetails.Sum(od => od.Quantity * od.UnitPrice);
+                    }
+                    await _orderRepository.UpdateOrderAsync(cartOrder);
+                }
+
                 var response = _mapper.Map<PaymentResponseModel>(payment);
-                response.CheckoutUrl = checkoutUrl; // Gán checkoutUrl vào response
+                response.CheckoutUrl = checkoutUrl;
                 return new BaseResponse<PaymentResponseModel>
                 {
                     Code = 201,
@@ -326,6 +362,115 @@ namespace EunDeParfum_Service.Service.Implement
             return result.checkoutUrl;
 
 
+        }
+
+        public async Task<BaseResponse<bool>> HandlePaymentWebhookAsync(WebhookType webhookType)
+        {
+            try
+            {
+                var webhookData = _payOsService.verifyPaymentWebhookData(webhookType);
+                if (webhookData.code != "00") // Payment failed
+                {
+                    return new BaseResponse<bool>
+                    {
+                        Code = 400,
+                        Success = false,
+                        Message = "Invalid webhook data.",
+                        Data = false
+                    };
+                }
+
+                var orderId = (int)webhookData.orderCode;
+                var order = await _orderRepository.GetOrderByIdAsync(orderId);
+                if (order == null || order.IsDeleted)
+                {
+                    return new BaseResponse<bool>
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Order not found or deleted.",
+                        Data = false
+                    };
+                }
+
+                // Update order status
+                order.Status = "Paid";
+                await _orderRepository.UpdateOrderAsync(order);
+
+                // Update payment status
+                var payment = (await _paymentRepository.GetAllPaymentsAsync())
+                    .FirstOrDefault(p => p.OrderId == orderId && p.Status == "Pending");
+                if (payment != null)
+                {
+                    payment.Status = "Paid";
+                    payment.PaymentDate = DateTime.UtcNow;
+                    await _paymentRepository.UpdatePaymentAsync(payment);
+                }
+
+                // Remove products from cart
+                var cartOrder = await _orderRepository.GetCartOrderByCustomerIdAsync(order.CustomerId);
+                if (cartOrder != null)
+                {
+                    var orderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(orderId);
+                    var orderDetailIds = orderDetails.Select(od => od.OrderDetailId).ToList();
+                    await _orderDetailService.RemoveOrderDetailsAsync(cartOrder.OrderId, orderDetailIds);
+                }
+
+                return new BaseResponse<bool>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Payment verified and cart updated.",
+                    Data = true
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<bool>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"Lỗi: {ex.Message}",
+                    Data = false
+                };
+            }
+        }
+
+        public async Task<BaseResponse<PaymentResponseModel>> GetPaymentByTransactionIdAsync(string transactionId)
+        {
+            try
+            {
+                var payment = await _paymentRepository.GetPaymentByTransactionIdAsync(transactionId);
+                if (payment == null)
+                {
+                    return new BaseResponse<PaymentResponseModel>
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Payment not found",
+                        Data = null
+                    };
+                }
+
+                var response = _mapper.Map<PaymentResponseModel>(payment);
+                return new BaseResponse<PaymentResponseModel>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Payment retrieved successfully",
+                    Data = response
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<PaymentResponseModel>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"An error occurred: {ex.Message}",
+                    Data = null
+                };
+            }
         }
     }
 }

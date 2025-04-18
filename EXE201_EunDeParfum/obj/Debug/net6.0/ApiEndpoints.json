@@ -587,6 +587,32 @@
   },
   {
     "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "CreateOrderFromSelectedItems",
+    "RelativePath": "api/order/create-from-cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Order.CreateOrderFromCartRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EunDeParfum_Service.ResponseModel.BaseResponse.BaseResponse\u00601[[EunDeParfum_Service.ResponseModel.Order.OrderReponseModel, EunDeParfum_Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
     "Method": "GeneratePaymentLink",
     "RelativePath": "api/order/generatepaymentlink/{orderId}",
     "HttpMethod": "GET",
@@ -619,6 +645,22 @@
   },
   {
     "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "GetByCustomerId",
+    "RelativePath": "api/order/getbycustomerid/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
     "Method": "GetById",
     "RelativePath": "api/order/getbyid/{id}",
     "HttpMethod": "GET",
@@ -627,6 +669,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "GetCart",
+    "RelativePath": "api/order/getcart/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -660,6 +718,22 @@
       {
         "Name": "orderDetailId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.OrderController",
+    "Method": "RemoveCartItems",
+    "RelativePath": "api/order/remove-cart-items",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EunDeParfum_Service.RequestModel.Order.RemoveCartItemsRequestModel",
         "IsRequired": true
       }
     ],
@@ -752,6 +826,22 @@
   },
   {
     "ContainingType": "EXE201_EunDeParfum.Controllers.PaymentController",
+    "Method": "GetPaymentByTransactionId",
+    "RelativePath": "api/payment/getbytransactionid/{transactionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transactionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.PaymentController",
     "Method": "GetPaymentsByStatus",
     "RelativePath": "api/payment/getpaymentsbystatus",
     "HttpMethod": "GET",
@@ -782,6 +872,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EXE201_EunDeParfum.Controllers.PaymentController",
+    "Method": "HandleWebhook",
+    "RelativePath": "api/payment/webhook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "webhookType",
+        "Type": "Net.payOS.Types.WebhookType",
         "IsRequired": true
       }
     ],

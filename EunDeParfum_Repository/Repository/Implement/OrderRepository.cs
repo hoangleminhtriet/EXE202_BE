@@ -54,6 +54,19 @@ namespace EunDeParfum_Repository.Repository.Implement
             return await _context.Orders.Where(o => o.IsDeleted == false).ToListAsync();
         }
 
+        public async Task<Order> GetCartOrderByCustomerIdAsync(int customerId)
+        {
+            try
+            {
+                return await _context.Orders
+                    .FirstOrDefaultAsync(o => o.CustomerId == customerId && o.Status == "Cart" && !o.IsDeleted);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi lấy giỏ hàng của khách hàng {customerId}: {ex.Message}", ex);
+            }
+        }
+
         public Task<Order> GetOrderByIdAsync(int orderId)
         {
             try
@@ -63,6 +76,20 @@ namespace EunDeParfum_Repository.Repository.Implement
             catch (Exception e)
             {
                 throw e;
+            }
+        }
+
+        public async Task<List<Order>> GetOrdersByCustomerIdAsync(int customerId)
+        {
+            try
+            {
+                return await _context.Orders
+                    .Where(o => o.CustomerId == customerId && o.IsDeleted == false)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi lấy danh sách đơn hàng của khách hàng {customerId}: {ex.Message}", ex);
             }
         }
 

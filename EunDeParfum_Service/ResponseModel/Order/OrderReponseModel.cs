@@ -16,6 +16,7 @@ namespace EunDeParfum_Service.ResponseModel.Order
         public DateTime OrderDate { get; set; }
         public string Status { get; set; }
         public bool IsDeleted { get; set; }
+        public string CheckoutUrl { get; set; }
         public List<OrderDetailResponseModel> OrderDetails { get; set; }
 
     }

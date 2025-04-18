@@ -187,6 +187,56 @@ namespace EunDeParfum_Service.Service.Implement
             }
         }
 
+        public async Task<BaseResponse<bool>> RemoveOrderDetailsAsync(int orderId, List<int> orderDetailIds)
+        {
+            try
+            {
+                if (orderDetailIds == null || !orderDetailIds.Any())
+                {
+                    return new BaseResponse<bool>
+                    {
+                        Code = 400,
+                        Success = false,
+                        Message = "Danh sách OrderDetailIds không hợp lệ.",
+                        Data = false
+                    };
+                }
+
+                foreach (var orderDetailId in orderDetailIds)
+                {
+                    var result = await DeleteOrderDetailAsync(orderDetailId);
+                    if (!result.Success)
+                    {
+                        return new BaseResponse<bool>
+                        {
+                            Code = result.Code,
+                            Success = false,
+                            Message = $"Không thể xóa chi tiết đơn hàng {orderDetailId}: {result.Message}",
+                            Data = false
+                        };
+                    }
+                }
+
+                return new BaseResponse<bool>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Xóa các chi tiết đơn hàng thành công.",
+                    Data = true
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<bool>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"Lỗi khi xóa chi tiết đơn hàng: {ex.Message}",
+                    Data = false
+                };
+            }
+        }
+
         public async Task<BaseResponse<OrderDetailResponseModel>> UpdateOrderDetailAsync(UpdateOrderDetailRequestModel model)
         {
             try

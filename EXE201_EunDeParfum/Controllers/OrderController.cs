@@ -1,5 +1,7 @@
 ﻿using EunDeParfum_Service.RequestModel.Order;
 using EunDeParfum_Service.RequestModel.OrderDetail;
+using EunDeParfum_Service.ResponseModel.BaseResponse;
+using EunDeParfum_Service.ResponseModel.Order;
 using EunDeParfum_Service.Service.Implement;
 using EunDeParfum_Service.Service.Interface;
 using Microsoft.AspNetCore.Http;
@@ -61,6 +63,18 @@ namespace EXE201_EunDeParfum.Controllers
 
             return StatusCode(result.Code, result);
         }
+        [HttpPost("remove-cart-items")]
+        public async Task<IActionResult> RemoveCartItems([FromBody] RemoveCartItemsRequestModel model)
+        {
+            var result = await _oderService.RemoveProductsFromCartAsync(model);
+            return StatusCode(result.Code, result);
+        }
+        [HttpPost("create-from-cart")]
+        public async Task<ActionResult<BaseResponse<OrderReponseModel>>> CreateOrderFromSelectedItems([FromBody] CreateOrderFromCartRequestModel model)
+        {
+            var result = await _oderService.CreateOrderFromSelectedItemsAsync(model);
+            return StatusCode(result.Code, result);
+        }
         [HttpPut("{orderId}")]
         public async Task<IActionResult> UpdateOrder(int orderId, [FromBody] UpdateOrderRequestModel model)
         {
@@ -117,6 +131,19 @@ namespace EXE201_EunDeParfum.Controllers
                 throw ex;
             }
         }
+        [HttpGet("GetCart/{customerId}")]
+        public async Task<IActionResult> GetCart([FromRoute] int customerId)
+        {
+            try
+            {
+                var result = await _oderService.GetCartAsync(customerId);
+                return StatusCode(result.Code, result);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         [HttpGet("GetById/{id}")]
         public async Task<IActionResult> GetById([FromRoute]int id)
@@ -124,6 +151,19 @@ namespace EXE201_EunDeParfum.Controllers
             try
             {
                 var result = await _oderService.GetOrderByIdAsync(id);
+                return StatusCode(result.Code, result);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [HttpGet("GetByCustomerId/{customerId}")]
+        public async Task<IActionResult> GetByCustomerId([FromRoute] int customerId)
+        {
+            try
+            {
+                var result = await _oderService.GetOrderByCustomerIdAsync(customerId);
                 return StatusCode(result.Code, result);
             }
             catch (Exception ex)

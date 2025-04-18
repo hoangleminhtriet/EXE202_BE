@@ -14,6 +14,6 @@ namespace EunDeParfum_Repository.Repository.Interface
         Task<Payment> GetPaymentByIdAsync(int paymentId);
         Task<List<Payment>> GetAllPaymentsAsync();
         Task<List<Payment>> GetPaymentsByStatusAsync(string status);
-
+        Task<Payment> GetPaymentByTransactionIdAsync(string transactionId); 
     }
 }

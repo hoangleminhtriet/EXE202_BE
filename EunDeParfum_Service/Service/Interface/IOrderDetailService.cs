@@ -17,5 +17,6 @@ namespace EunDeParfum_Service.Service.Interface
         Task<List<OrderDetailResponseModel>> GetListOrderDetailsByListOrderIds(List<int> orderIds);
         Task<BaseResponse<OrderDetailResponseModel>> UpdateOrderDetailAsync(UpdateOrderDetailRequestModel model);
         Task<BaseResponse<bool>> DeleteOrderDetailAsync(int orderDetailId);
+        Task<BaseResponse<bool>> RemoveOrderDetailsAsync(int orderId, List<int> orderDetailIds);
     }
 }
