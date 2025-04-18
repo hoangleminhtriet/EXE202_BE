@@ -364,77 +364,77 @@ namespace EunDeParfum_Service.Service.Implement
 
         }
 
-        public async Task<BaseResponse<bool>> HandlePaymentWebhookAsync(WebhookType webhookType)
-        {
-            try
-            {
-                var webhookData = _payOsService.verifyPaymentWebhookData(webhookType);
-                if (webhookData.code != "00") // Payment failed
-                {
-                    return new BaseResponse<bool>
-                    {
-                        Code = 400,
-                        Success = false,
-                        Message = "Invalid webhook data.",
-                        Data = false
-                    };
-                }
+        //public async Task<BaseResponse<bool>> HandlePaymentWebhookAsync(WebhookType webhookType)
+        //{
+        //    try
+        //    {
+        //        var webhookData = _payOsService.verifyPaymentWebhookData(webhookType);
+        //        if (webhookData.code != "00") // Payment failed
+        //        {
+        //            return new BaseResponse<bool>
+        //            {
+        //                Code = 400,
+        //                Success = false,
+        //                Message = "Invalid webhook data.",
+        //                Data = false
+        //            };
+        //        }
 
-                var orderId = (int)webhookData.orderCode;
-                var order = await _orderRepository.GetOrderByIdAsync(orderId);
-                if (order == null || order.IsDeleted)
-                {
-                    return new BaseResponse<bool>
-                    {
-                        Code = 404,
-                        Success = false,
-                        Message = "Order not found or deleted.",
-                        Data = false
-                    };
-                }
+        //        var orderId = (int)webhookData.orderCode;
+        //        var order = await _orderRepository.GetOrderByIdAsync(orderId);
+        //        if (order == null || order.IsDeleted)
+        //        {
+        //            return new BaseResponse<bool>
+        //            {
+        //                Code = 404,
+        //                Success = false,
+        //                Message = "Order not found or deleted.",
+        //                Data = false
+        //            };
+        //        }
 
-                // Update order status
-                order.Status = "Paid";
-                await _orderRepository.UpdateOrderAsync(order);
+        //        // Update order status
+        //        order.Status = "Paid";
+        //        await _orderRepository.UpdateOrderAsync(order);
 
-                // Update payment status
-                var payment = (await _paymentRepository.GetAllPaymentsAsync())
-                    .FirstOrDefault(p => p.OrderId == orderId && p.Status == "Pending");
-                if (payment != null)
-                {
-                    payment.Status = "Paid";
-                    payment.PaymentDate = DateTime.UtcNow;
-                    await _paymentRepository.UpdatePaymentAsync(payment);
-                }
+        //        // Update payment status
+        //        var payment = (await _paymentRepository.GetAllPaymentsAsync())
+        //            .FirstOrDefault(p => p.OrderId == orderId && p.Status == "Pending");
+        //        if (payment != null)
+        //        {
+        //            payment.Status = "Paid";
+        //            payment.PaymentDate = DateTime.UtcNow;
+        //            await _paymentRepository.UpdatePaymentAsync(payment);
+        //        }
 
-                // Remove products from cart
-                var cartOrder = await _orderRepository.GetCartOrderByCustomerIdAsync(order.CustomerId);
-                if (cartOrder != null)
-                {
-                    var orderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(orderId);
-                    var orderDetailIds = orderDetails.Select(od => od.OrderDetailId).ToList();
-                    await _orderDetailService.RemoveOrderDetailsAsync(cartOrder.OrderId, orderDetailIds);
-                }
+        //        // Remove products from cart
+        //        var cartOrder = await _orderRepository.GetCartOrderByCustomerIdAsync(order.CustomerId);
+        //        if (cartOrder != null)
+        //        {
+        //            var orderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(orderId);
+        //            var orderDetailIds = orderDetails.Select(od => od.OrderDetailId).ToList();
+        //            await _orderDetailService.RemoveOrderDetailsAsync(cartOrder.OrderId, orderDetailIds);
+        //        }
 
-                return new BaseResponse<bool>
-                {
-                    Code = 200,
-                    Success = true,
-                    Message = "Payment verified and cart updated.",
-                    Data = true
-                };
-            }
-            catch (Exception ex)
-            {
-                return new BaseResponse<bool>
-                {
-                    Code = 500,
-                    Success = false,
-                    Message = $"Lỗi: {ex.Message}",
-                    Data = false
-                };
-            }
-        }
+        //        return new BaseResponse<bool>
+        //        {
+        //            Code = 200,
+        //            Success = true,
+        //            Message = "Payment verified and cart updated.",
+        //            Data = true
+        //        };
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return new BaseResponse<bool>
+        //        {
+        //            Code = 500,
+        //            Success = false,
+        //            Message = $"Lỗi: {ex.Message}",
+        //            Data = false
+        //        };
+        //    }
+        //}
 
         public async Task<BaseResponse<PaymentResponseModel>> GetPaymentByTransactionIdAsync(string transactionId)
         {

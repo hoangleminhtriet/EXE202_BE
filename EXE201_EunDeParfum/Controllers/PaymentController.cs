@@ -98,11 +98,11 @@ namespace EXE201_EunDeParfum.Controllers
                 throw ex;
             }
         }
-        [HttpPost("webhook")]
-        public async Task<IActionResult> HandleWebhook([FromBody] WebhookType webhookType)
-        {
-            var result = await _paymentService.HandlePaymentWebhookAsync(webhookType);
-            return StatusCode(result.Code, result);
-        }
+        //[HttpPost("webhook")]
+        //public async Task<IActionResult> HandleWebhook([FromBody] WebhookType webhookType)
+        //{
+        //    var result = await _paymentService.HandlePaymentWebhookAsync(webhookType);
+        //    return StatusCode(result.Code, result);
+        //}
     }
 }

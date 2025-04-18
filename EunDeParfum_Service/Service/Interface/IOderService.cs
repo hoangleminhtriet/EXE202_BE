@@ -22,7 +22,7 @@ namespace EunDeParfum_Service.Service.Interface
         Task<BaseResponse<OrderReponseModel>> UpdateOrderStatusAsync(int orderId, string newStatus);
         Task<BaseResponse<bool>> RemoveProductsFromCartAsync(RemoveCartItemsRequestModel model); // Thêm
         Task<BaseResponse<OrderReponseModel>> CreateOrderFromSelectedItemsAsync(CreateOrderFromCartRequestModel model);
-        Task<BaseResponse<OrderReponseModel>> GetOrderByCustomerIdAsync(int customerId);
+        Task<BaseResponse<List<OrderReponseModel>>> GetOrderByCustomerIdAsync(int customerId);
         Task<BaseResponse<OrderReponseModel>> GetCartAsync(int customerId);
     }
 }

@@ -20,7 +20,7 @@ namespace EunDeParfum_Service.Service.Interface
         Task<BaseResponse<PaymentResponseModel>> GetPaymentByIdAsync(int paymentId);
         Task<DynamicResponse<PaymentResponseModel>> GetAllPaymentsAsync(GetAllPaymentRequestModel model);
         Task<DynamicResponse<PaymentResponseModel>> GetPaymentsByStatusAsync(string status);
-        Task<BaseResponse<bool>> HandlePaymentWebhookAsync(WebhookType webhookType);
+        //Task<BaseResponse<bool>> HandlePaymentWebhookAsync(WebhookType webhookType);
         Task<BaseResponse<PaymentResponseModel>> GetPaymentByTransactionIdAsync(string transactionId);
     }
 }

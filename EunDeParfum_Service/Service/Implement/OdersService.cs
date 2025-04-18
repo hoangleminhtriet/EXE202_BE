@@ -349,7 +349,7 @@ namespace EunDeParfum_Service.Service.Implement
                     CustomerId = model.CustomerId,
                     TotalAmount = selectedDetails.Sum(od => od.Quantity * od.UnitPrice),
                     OrderDate = DateTime.UtcNow,
-                    Status = "Pending",
+                    Status = "Paid",
                     IsDeleted = false
                 };
                 await _orderRepository.CreateOrderAsync(newOrder);
@@ -864,14 +864,14 @@ namespace EunDeParfum_Service.Service.Implement
             }
         }
 
-        public async Task<BaseResponse<OrderReponseModel>> GetOrderByCustomerIdAsync(int customerId)
+        public async Task<BaseResponse<List<OrderReponseModel>>> GetOrderByCustomerIdAsync(int customerId)
         {
             try
             {
-                var order = await _orderRepository.GetCartOrderByCustomerIdAsync(customerId);
-                if (order == null)
+                var orders = await _orderRepository.GetOrdersByCustomerIdAsync(customerId);
+                if (orders == null || !orders.Any())
                 {
-                    return new BaseResponse<OrderReponseModel>
+                    return new BaseResponse<List<OrderReponseModel>>
                     {
                         Code = 404,
                         Success = false,
@@ -880,20 +880,25 @@ namespace EunDeParfum_Service.Service.Implement
                     };
                 }
 
-                var response = _mapper.Map<OrderReponseModel>(order);
-                response.OrderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(order.OrderId);
+                var response = new List<OrderReponseModel>();
+                foreach (var order in orders)
+                {
+                    var orderResponse = _mapper.Map<OrderReponseModel>(order);
+                    orderResponse.OrderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(order.OrderId);
+                    response.Add(orderResponse);
+                }
 
-                return new BaseResponse<OrderReponseModel>
+                return new BaseResponse<List<OrderReponseModel>>
                 {
                     Code = 200,
                     Success = true,
-                    Message = "Lấy đơn hàng thành công!",
+                    Message = "Lấy danh sách đơn hàng thành công!",
                     Data = response
                 };
             }
             catch (Exception ex)
             {
-                return new BaseResponse<OrderReponseModel>
+                return new BaseResponse<List<OrderReponseModel>>
                 {
                     Code = 500,
                     Success = false,

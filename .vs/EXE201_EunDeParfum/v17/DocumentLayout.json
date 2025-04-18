@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "E:\\Git\\EXE202_BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|e:\\git\\exe202_be\\exe201_eundeparfum\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\service\\implement\\odersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\odersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,24 +11,16 @@
       "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\interface\\ioderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|e:\\git\\exe202_be\\exe201_eundeparfum\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|solutionrelative:exe201_eundeparfum\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|e:\\git\\exe202_be\\eundeparfum_repository\\repository\\implement\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\implement\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\service\\implement\\paymentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\paymentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|e:\\git\\exe202_be\\eundeparfum_repository\\repository\\implement\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\implement\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|e:\\git\\exe202_be\\eundeparfum_repository\\repository\\interface\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\interface\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\requestmodel\\order\\createorderfromcartrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\order\\createorderfromcartrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\responsemodel\\order\\orderreponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\responsemodel\\order\\orderreponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5001C77A-E22A-4FAB-B085-FD35A01AEE50}|EXE201_EunDeParfum\\EXE201_EunDeParfum.csproj|e:\\git\\exe202_be\\exe201_eundeparfum\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,8 +31,36 @@
       "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\interface\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|e:\\git\\exe202_be\\eundeparfum_repository\\repository\\implement\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\implement\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\service\\interface\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\interface\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\service\\implement\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\service\\implement\\oderdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\oderdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|e:\\git\\exe202_be\\eundeparfum_repository\\repository\\implement\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\implement\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\requestmodel\\productcate\\getcategoriesbyproductrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\productcate\\getcategoriesbyproductrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\responsemodel\\order\\orderreponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\responsemodel\\order\\orderreponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|e:\\git\\exe202_be\\eundeparfum_repository\\repository\\interface\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|solutionrelative:eundeparfum_repository\\repository\\interface\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\requestmodel\\order\\createorderfromcartrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\order\\createorderfromcartrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FAA5D2D-C368-45D5-93A0-828AF7023177}|EunDeParfum_Repository\\EunDeParfum_Repository.csproj|e:\\git\\exe202_be\\eundeparfum_repository\\repository\\interface\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,14 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\requestmodel\\order\\removecartitemsrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\requestmodel\\order\\removecartitemsrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\service\\implement\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\implement\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\service\\interface\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|solutionrelative:eundeparfum_service\\service\\interface\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A7D8CBF-F695-4543-A0B6-6DEFD9376A45}|EunDeParfum_Service\\EunDeParfum_Service.csproj|e:\\git\\exe202_be\\eundeparfum_service\\service\\interface\\ioderdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 212,
-          "SelectedChildIndex": 23,
+          "SelectedChildIndex": 38,
           "Children": [
             {
               "$type": "Bookmark",
@@ -186,7 +194,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
+              "Title": "OderDetailsService.cs",
+              "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\OderDetailsService.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\OderDetailsService.cs",
+              "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\OderDetailsService.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\OderDetailsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T16:23:41.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetCategoriesByProductRequestModel.cs",
+              "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\GetCategoriesByProductRequestModel.cs",
+              "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\ProductCate\\GetCategoriesByProductRequestModel.cs",
+              "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\ProductCate\\GetCategoriesByProductRequestModel.cs",
+              "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\ProductCate\\GetCategoriesByProductRequestModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T16:16:29.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "CreateOrderFromCartRequestModel.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\Order\\CreateOrderFromCartRequestModel.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\Order\\CreateOrderFromCartRequestModel.cs",
@@ -194,12 +226,11 @@
               "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\Order\\CreateOrderFromCartRequestModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T11:00:53.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T11:00:53.379Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EXE201_EunDeParfum\\Program.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\Program.cs",
@@ -207,12 +238,11 @@
               "RelativeToolTip": "EXE201_EunDeParfum\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:52:43.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:52:43.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "DependencyInjectionContainers.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
@@ -220,38 +250,35 @@
               "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\DependencyInjectionContainers.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwCYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:48:13.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:48:13.053Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "PaymentController.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EXE201_EunDeParfum\\Controllers\\PaymentController.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\Controllers\\PaymentController.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EXE201_EunDeParfum\\Controllers\\PaymentController.cs",
               "RelativeToolTip": "EXE201_EunDeParfum\\Controllers\\PaymentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:45:13.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:45:13.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "OrderController.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EXE201_EunDeParfum\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\Controllers\\OrderController.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EXE201_EunDeParfum\\Controllers\\OrderController.cs",
               "RelativeToolTip": "EXE201_EunDeParfum\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAuwJEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEoAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:44:47.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:44:47.2Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
@@ -259,12 +286,11 @@
               "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\MappingProfile.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAQwHwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:43:29.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:43:29.774Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "AutoMapperConfig.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EXE201_EunDeParfum\\AppStarts\\AutoMapperConfig.cs",
               "RelativeDocumentMoniker": "EXE201_EunDeParfum\\AppStarts\\AutoMapperConfig.cs",
@@ -272,12 +298,11 @@
               "RelativeToolTip": "EXE201_EunDeParfum\\AppStarts\\AutoMapperConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:43:27.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:43:27.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "OrderReponseModel.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\ResponseModel\\Order\\OrderReponseModel.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\ResponseModel\\Order\\OrderReponseModel.cs",
@@ -285,12 +310,11 @@
               "RelativeToolTip": "EunDeParfum_Service\\ResponseModel\\Order\\OrderReponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:42:28.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:42:28.947Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "RemoveCartItemsRequestModel.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\RequestModel\\Order\\RemoveCartItemsRequestModel.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\RequestModel\\Order\\RemoveCartItemsRequestModel.cs",
@@ -298,12 +322,11 @@
               "RelativeToolTip": "EunDeParfum_Service\\RequestModel\\Order\\RemoveCartItemsRequestModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:42:06.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:42:06.524Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "ICustomerRepository.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\ICustomerRepository.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Interface\\ICustomerRepository.cs",
@@ -311,51 +334,47 @@
               "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Interface\\ICustomerRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:40:27.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:40:27.039Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "IPaymentService.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IPaymentService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Interface\\IPaymentService.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IPaymentService.cs",
               "RelativeToolTip": "EunDeParfum_Service\\Service\\Interface\\IPaymentService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAABmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:36:35.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:36:35.388Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 7,
               "Title": "IOrderDetailService.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IOrderDetailService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Interface\\IOrderDetailService.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IOrderDetailService.cs",
               "RelativeToolTip": "EunDeParfum_Service\\Service\\Interface\\IOrderDetailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:36:30.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:36:30.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "IOderService.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IOderService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Interface\\IOderService.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IOderService.cs",
               "RelativeToolTip": "EunDeParfum_Service\\Service\\Interface\\IOderService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAADwvxkAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:36:27.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:36:27.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "IOderDetailsService.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Interface\\IOderDetailsService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Interface\\IOderDetailsService.cs",
@@ -363,12 +382,11 @@
               "RelativeToolTip": "EunDeParfum_Service\\Service\\Interface\\IOderDetailsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:36:24.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:36:24.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "PayOsService.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\PayOsService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\PayOsService.cs",
@@ -376,51 +394,48 @@
               "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\PayOsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:36:19.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:36:19.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PaymentsService.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\PaymentsService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\PaymentsService.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\PaymentsService.cs",
               "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\PaymentsService.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwE0AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAK8BAAAAAAAAAAAAwNwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:36:16.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:36:16.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 8,
               "Title": "OrderDetailService.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\OrderDetailService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\OrderDetailService.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\OrderDetailService.cs",
               "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\OrderDetailService.cs",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAgwNcAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFsAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:36:10.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:36:10.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "OdersService.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\OdersService.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Service\\Service\\Implement\\OdersService.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Service\\Service\\Implement\\OdersService.cs",
               "RelativeToolTip": "EunDeParfum_Service\\Service\\Implement\\OdersService.cs",
-              "ViewState": "AgIAAIEDAAAAAAAAAAAAwJYDAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAHUDAAAAAAAAAAAAAGEBAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T08:36:06.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "OrderDetailRepository.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Implement\\OrderDetailRepository.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Implement\\OrderDetailRepository.cs",
@@ -428,12 +443,11 @@
               "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Implement\\OrderDetailRepository.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAAwHUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:35:58.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:35:58.307Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "IOrderDetailRepository.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\IOrderDetailRepository.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Interface\\IOrderDetailRepository.cs",
@@ -441,25 +455,23 @@
               "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Interface\\IOrderDetailRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:35:54.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:35:54.342Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "PaymentRepository.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Implement\\PaymentRepository.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Implement\\PaymentRepository.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Implement\\PaymentRepository.cs",
               "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Implement\\PaymentRepository.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAqwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:35:48.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:35:48.734Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "IPaymentRepository.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\IPaymentRepository.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Interface\\IPaymentRepository.cs",
@@ -467,34 +479,31 @@
               "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Interface\\IPaymentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:35:45.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:35:45.513Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "IOrderRepository.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\IOrderRepository.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Interface\\IOrderRepository.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Interface\\IOrderRepository.cs",
               "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Interface\\IOrderRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:35:41.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:35:41.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Implement\\OrderRepository.cs",
               "RelativeDocumentMoniker": "EunDeParfum_Repository\\Repository\\Implement\\OrderRepository.cs",
               "ToolTip": "E:\\Git\\EXE202_BE\\EunDeParfum_Repository\\Repository\\Implement\\OrderRepository.cs",
               "RelativeToolTip": "EunDeParfum_Repository\\Repository\\Implement\\OrderRepository.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAIwFkAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAA0wFEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T08:35:33.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T08:35:33.087Z"
             }
           ]
         },
