@@ -10,6 +10,7 @@ using EunDeParfum_Service.ResponseModel.BaseResponse;
 using EunDeParfum_Service.ResponseModel.Order;
 using EunDeParfum_Service.ResponseModel.OrderDetail;
 using EunDeParfum_Service.Service.Interface;
+using Net.payOS.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,12 +24,14 @@ namespace EunDeParfum_Service.Service.Implement
         private readonly IOrderRepository _orderRepository;
         private readonly IMapper _mapper;
         private readonly IOrderDetailService _orderDetailService;
+        private readonly PayOsService _payOsService;
 
-        public OdersService(IOrderRepository orderRepository, IMapper mapper, IOrderDetailService orderDetailService)
+        public OdersService(IOrderRepository orderRepository, IMapper mapper, IOrderDetailService orderDetailService, PayOsService payOsService)
         {
             _orderRepository = orderRepository;
             _mapper = mapper;
             _orderDetailService = orderDetailService;
+            _payOsService = payOsService;
         }
 
         public async Task<BaseResponse<OrderReponseModel>> AddToCartAsync(AddToCartRequestModel model)
@@ -206,9 +209,68 @@ namespace EunDeParfum_Service.Service.Implement
             }
         }
 
-        public Task<BaseResponse<OrderReponseModel>> DeleteOrderAsync(int orderId, bool status)
+        public async Task<BaseResponse<OrderReponseModel>> DeleteOrderAsync(int orderId, bool status)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var order = await _orderRepository.GetOrderByIdAsync(orderId);
+                if (order == null)
+                {
+                    return new BaseResponse<OrderReponseModel>()
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Order not found!",
+                        Data = null
+                    };
+                }
+
+                order.IsDeleted = status;
+                await _orderRepository.UpdateOrderAsync(order);
+
+                return new BaseResponse<OrderReponseModel>()
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = "Delete Order success!",
+                    Data = null
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<OrderReponseModel>()
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = ex.Message,
+                    Data = null
+                };
+            }
+        }
+
+        public async Task<string> GeneratePaymentLinkForOrderAsync(int orderId)
+        {
+            var order = await _orderRepository.GetOrderByIdAsync(orderId);
+            if (order == null || order.IsDeleted)
+            {
+                throw new Exception("Order not found or has been deleted.");
+            }
+
+            // Tạo đối tượng PaymentData
+            var paymentData = new PaymentData(
+                orderCode: (long)order.OrderId,   // orderCode kiểu long
+                amount: (int)order.TotalAmount,        // amount kiểu decimal
+                description: $"Thanh toán đơn hàng #{order.OrderId}",
+                items: new List<ItemData>(),       // Nếu có thể cung cấp chi tiết sản phẩm, bạn có thể bổ sung vào đây
+                cancelUrl: "http://localhost:5173/payment/cancel", // Cung cấp URL hủy
+                returnUrl: "http://localhost:5173/payment/success" // Cung cấp URL trả về
+            );
+
+            // Gọi dịch vụ PayOs để tạo liên kết thanh toán
+            var result = await _payOsService.createPaymentLink(paymentData);
+
+            // Trả về URL thanh toán nếu thành công
+            return result.checkoutUrl;
         }
 
         public async Task<DynamicResponse<OrderReponseModel>> GetAllOrdersAsync(GetAllOrderRequestModel model)
@@ -504,6 +566,103 @@ namespace EunDeParfum_Service.Service.Implement
                     Message = $"Lỗi: {ex.Message}",
                     Data = null
                 };
+            }
+        }
+
+        public async Task<BaseResponse<OrderReponseModel>> UpdateOrderStatusAsync(int orderId, string newStatus)
+        {
+            try
+            {
+                // 1. Kiểm tra đơn hàng tồn tại
+                var order = await _orderRepository.GetOrderByIdAsync(orderId);
+                if (order == null || order.IsDeleted)
+                {
+                    return new BaseResponse<OrderReponseModel>
+                    {
+                        Code = 404,
+                        Success = false,
+                        Message = "Đơn hàng không tồn tại hoặc đã bị xóa!",
+                        Data = null
+                    };
+                }
+
+                // 2. Danh sách trạng thái hợp lệ
+                var validStatuses = new List<string> { "Cart", "Paid", "Confirmed", "Processing", "Completed", "Cancelled", "Rejected" };
+                if (!validStatuses.Contains(newStatus))
+                {
+                    return new BaseResponse<OrderReponseModel>
+                    {
+                        Code = 400,
+                        Success = false,
+                        Message = $"Trạng thái '{newStatus}' không hợp lệ! Các trạng thái hợp lệ: {string.Join(", ", validStatuses)}",
+                        Data = null
+                    };
+                }
+
+                // 3. Kiểm tra chuyển đổi trạng thái hợp lệ
+                bool isValidTransition = IsValidStatusTransition(order.Status, newStatus);
+                if (!isValidTransition)
+                {
+                    return new BaseResponse<OrderReponseModel>
+                    {
+                        Code = 400,
+                        Success = false,
+                        Message = $"Không thể chuyển từ trạng thái '{order.Status}' sang '{newStatus}'!",
+                        Data = null
+                    };
+                }
+
+                // 4. Cập nhật trạng thái
+                order.Status = newStatus;
+                await _orderRepository.UpdateOrderAsync(order);
+
+                // 5. Lấy danh sách OrderDetails để trả về response
+                var orderDetails = await _orderDetailService.GetListOrderDetailsByOrderId(orderId);
+
+                // 6. Chuẩn bị response
+                var response = _mapper.Map<OrderReponseModel>(order);
+                response.OrderDetails = orderDetails;
+
+                return new BaseResponse<OrderReponseModel>
+                {
+                    Code = 200,
+                    Success = true,
+                    Message = $"Cập nhật trạng thái đơn hàng thành '{newStatus}' thành công!",
+                    Data = response
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<OrderReponseModel>
+                {
+                    Code = 500,
+                    Success = false,
+                    Message = $"Lỗi: {ex.Message}",
+                    Data = null
+                };
+            }
+        }
+        private bool IsValidStatusTransition(string currentStatus, string newStatus)
+        {
+            // Trạng thái cuối: không thể chuyển đổi
+            if (currentStatus == "Completed" || currentStatus == "Cancelled" || currentStatus == "Rejected")
+            {
+                return false;
+            }
+
+            // Kiểm tra chuyển đổi theo luồng
+            switch (currentStatus)
+            {
+                case "Cart":
+                    return newStatus == "Paid" || newStatus == "Cancelled" || newStatus == "Rejected";
+                case "Paid":
+                    return newStatus == "Confirmed" || newStatus == "Cancelled" || newStatus == "Rejected";
+                case "Confirmed":
+                    return newStatus == "Processing" || newStatus == "Cancelled" || newStatus == "Rejected";
+                case "Processing":
+                    return newStatus == "Completed" || newStatus == "Cancelled" || newStatus == "Rejected";
+                default:
+                    return false; // Không nên xảy ra vì đã kiểm tra validStatuses
             }
         }
     }

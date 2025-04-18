@@ -18,6 +18,7 @@ namespace EunDeParfum_Service.Service.Interface
         Task<DynamicResponse<OrderReponseModel>> GetAllOrdersAsync(GetAllOrderRequestModel model);
         Task<BaseResponse<OrderReponseModel>> AddToCartAsync(AddToCartRequestModel model);
         Task<BaseResponse<OrderReponseModel>> UpdateCartAsync(UpdateCartRequestModel model);
-
+        Task<string> GeneratePaymentLinkForOrderAsync(int orderId);
+        Task<BaseResponse<OrderReponseModel>> UpdateOrderStatusAsync(int orderId, string newStatus);
     }
 }

@@ -1,4 +1,5 @@
-﻿using EunDeParfum_Service.RequestModel.VIETQR;
+﻿using EunDeParfum_Service.RequestModel.Payment;
+using EunDeParfum_Service.RequestModel.VIETQR;
 using EunDeParfum_Service.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,14 +15,74 @@ namespace EXE201_EunDeParfum.Controllers
             _paymentService = paymentService;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> GenerateQr([FromBody] VietQrRequest request)
+        [HttpPost("Create")]
+        public async Task<IActionResult> CreatePayment([FromBody] CreatePaymentRequestModel model)
         {
-            var result = await _paymentService.GenerateQrAsync(request);
-            if (!result.Success)
-                return BadRequest(result);
+            try
+            {
+                var result = await _paymentService.CreatePaymentAsync(model);
+                return StatusCode(result.Code, result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error creating payment", ex);
+            }
+        }
 
-            return Ok(result);
+        [HttpPut("Update/{id}")]
+        public async Task<IActionResult> UpdatePayment([FromBody] CreatePaymentRequestModel model, int id)
+        {
+            try
+            {
+                var result = await _paymentService.UpdatePaymentAsync(model, id);
+                return StatusCode(result.Code, result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error updating payment", ex);
+            }
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPaymentById(int id)
+        {
+            try
+            {
+                var result = await _paymentService.GetPaymentByIdAsync(id);
+                return StatusCode(result.Code, result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving payment", ex);
+            }
+        }
+
+        [HttpPost("GetAll")]
+        public async Task<IActionResult> GetAllPayments([FromBody] GetAllPaymentRequestModel model)
+        {
+            try
+            {
+                var result = await _paymentService.GetAllPaymentsAsync(model);
+                return StatusCode(result.Code, result);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving all payments", ex);
+            }
+        }
+
+        [HttpGet("GetPaymentsByStatus")]
+        public async Task<IActionResult> GetPaymentsByStatus([FromQuery] string status)
+        {
+            try
+            {
+                var result = await _paymentService.GetPaymentsByStatusAsync(status);
+                return StatusCode(result.Code, result);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

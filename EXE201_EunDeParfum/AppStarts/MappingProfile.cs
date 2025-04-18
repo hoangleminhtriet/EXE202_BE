@@ -24,7 +24,9 @@ using EunDeParfum_Service.RequestModel.Order;
 using EunDeParfum_Service.ResponseModel.OrderDetail;
 using EunDeParfum_Service.ResponseModel.Order;
 using EunDeParfum_Service.RequestModel.VIETQR;
-using EunDeParfum_Service.ResponseModel.VIETQR;  // Thêm dòng này để sử dụng Category
+using EunDeParfum_Service.ResponseModel.VIETQR;
+using EunDeParfum_Service.RequestModel.Payment;
+using EunDeParfum_Service.ResponseModel.Payment;  // Thêm dòng này để sử dụng Category
 
 namespace EXE201_EunDeParfum.AppStarts
 {
@@ -92,14 +94,47 @@ namespace EXE201_EunDeParfum.AppStarts
             CreateMap<CreateOrderRequestModel, Order>().ReverseMap();
             CreateMap<CreateOrderRequestModel, OrderReponseModel>().ReverseMap();
             CreateMap<OrderReponseModel, Order>().ReverseMap();
+            CreateMap<UpdateOrderRequestModel, Order>().ReverseMap();
+            CreateMap<AddToCartRequestModel, Order>().ReverseMap();
+            CreateMap<UpdateCartRequestModel, Order>().ReverseMap();
 
             //OrderDetail
             CreateMap<OrderDetailResponseModel, OrderDetail>().ReverseMap();
-            
+            CreateMap<OrderDetail, OrderDetailResponseModel>()
+                .ForMember(dest => dest.ProductName, opt => opt.Ignore());
 
-            //Payment
-            CreateMap<VietQrRequest, VietQrResponse>().ReverseMap();
-            
+
+            // Ánh xạ VietQrRequest → VietQrResponse
+            CreateMap<VietQrRequest, VietQrResponse>()
+                .ForMember(dest => dest.Success, opt => opt.Ignore())
+                .ForMember(dest => dest.QrBase64, opt => opt.Ignore())
+                .ForMember(dest => dest.Message, opt => opt.Ignore());
+
+            // Ánh xạ CreatePaymentRequestModel → Payment
+            CreateMap<CreatePaymentRequestModel, Payment>()
+                .ForMember(dest => dest.PaymentId, opt => opt.Ignore())
+                .ForMember(dest => dest.PaymentDate, opt => opt.Ignore())
+                .ForMember(dest => dest.Status, opt => opt.Ignore())
+                .ForMember(dest => dest.TransactionId, opt => opt.Ignore())
+                .ForMember(dest => dest.Order, opt => opt.Ignore());
+
+            // Ánh xạ Payment → PaymentResponseModel
+            CreateMap<Payment, PaymentResponseModel>()
+                .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.Order.CustomerId))
+                .ForMember(dest => dest.PaymentId, opt => opt.MapFrom(src => src.PaymentId))
+                .ForMember(dest => dest.OrderId, opt => opt.MapFrom(src => src.OrderId))
+                .ForMember(dest => dest.PaymentMethod, opt => opt.MapFrom(src => src.PaymentMethod))
+                .ForMember(dest => dest.PaymentDate, opt => opt.MapFrom(src => src.PaymentDate))
+                .ForMember(dest => dest.Amount, opt => opt.MapFrom(src => src.Order.TotalAmount))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.TransactionId, opt => opt.MapFrom(src => src.TransactionId))
+                .ForMember(dest => dest.CheckoutUrl, opt => opt.Ignore());
+
+            // Ánh xạ ngược PaymentResponseModel → Payment (nếu cần)
+            CreateMap<PaymentResponseModel, Payment>()
+                .ForMember(dest => dest.Order, opt => opt.Ignore())
+                .ForMember(dest => dest.PaymentDate, opt => opt.Ignore());
+
         }
     }
 }

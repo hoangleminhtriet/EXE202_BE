@@ -74,6 +74,13 @@ namespace EunDeParfum_Repository.Repository.Implement
             .ToListAsync();
         }
 
+        public async Task<List<Product>> GetProductsByIdsAsync(List<int> productIds)
+        {
+            return await _context.Products
+                .Where(p => productIds.Contains(p.ProductId) && !p.IsDeleted)
+                .ToListAsync();
+        }
+
         public async Task<bool> UpdateProductAsync(Product product)
         {
             try

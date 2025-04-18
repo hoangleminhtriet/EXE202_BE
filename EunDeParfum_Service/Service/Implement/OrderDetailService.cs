@@ -18,11 +18,16 @@ namespace EunDeParfum_Service.Service.Implement
     public class OrderDetailService : IOrderDetailService
     {
         private readonly IOrderDetailRepository _orderDetailRepository;
+        private readonly IProductRepository _productRepository; 
         private readonly IMapper _mapper;
 
-        public OrderDetailService(IOrderDetailRepository orderDetailRepository, IMapper mapper)
+        public OrderDetailService(
+            IOrderDetailRepository orderDetailRepository,
+            IProductRepository productRepository,
+            IMapper mapper)
         {
             _orderDetailRepository = orderDetailRepository;
+            _productRepository = productRepository;
             _mapper = mapper;
         }
         public async Task<List<OrderDetailResponseModel>> CreateListOrderDetails(CreateOrderDetailRequestModel model)
@@ -89,15 +94,59 @@ namespace EunDeParfum_Service.Service.Implement
             if (orderIds == null || !orderIds.Any()) return new List<OrderDetailResponseModel>();
 
             var orderDetails = await _orderDetailRepository.GetAll();
-            var orderDetail = orderDetails.Where(od => orderIds.Contains(od.OrderId)).ToList();
+            var filteredOrderDetails = orderDetails
+                .Where(od => orderIds.Contains(od.OrderId))
+                .ToList();
 
-            return _mapper.Map<List<OrderDetailResponseModel>>(orderDetails);
+            if (!filteredOrderDetails.Any()) return new List<OrderDetailResponseModel>();
+
+            // Lấy danh sách productId từ orderDetails
+            var productIds = filteredOrderDetails
+                .Select(od => od.ProductId)
+                .Distinct()
+                .ToList();
+
+            // Lấy thông tin sản phẩm
+            var products = await _productRepository.GetProductsByIdsAsync(productIds);
+            var productDict = products.ToDictionary(p => p.ProductId, p => p.Name);
+
+            // Ánh xạ sang OrderDetailResponseModel
+            var response = _mapper.Map<List<OrderDetailResponseModel>>(filteredOrderDetails);
+            foreach (var detail in response)
+            {
+                detail.ProductName = productDict.ContainsKey(detail.ProductId)
+                    ? productDict[detail.ProductId]
+                    : "Không xác định";
+            }
+
+            return response;
         }
 
         public async Task<List<OrderDetailResponseModel>> GetListOrderDetailsByOrderId(int orderId)
         {
             var orderDetails = await _orderDetailRepository.GetListOrderDetailAsyncByOrderId(orderId);
-            return _mapper.Map<List<OrderDetailResponseModel>>(orderDetails);
+            if (orderDetails == null || !orderDetails.Any()) return new List<OrderDetailResponseModel>();
+
+            // Lấy danh sách productId
+            var productIds = orderDetails
+                .Select(od => od.ProductId)
+                .Distinct()
+                .ToList();
+
+            // Lấy thông tin sản phẩm
+            var products = await _productRepository.GetProductsByIdsAsync(productIds);
+            var productDict = products.ToDictionary(p => p.ProductId, p => p.Name);
+
+            // Ánh xạ sang OrderDetailResponseModel
+            var response = _mapper.Map<List<OrderDetailResponseModel>>(orderDetails);
+            foreach (var detail in response)
+            {
+                detail.ProductName = productDict.ContainsKey(detail.ProductId)
+                    ? productDict[detail.ProductId]
+                    : "Không xác định";
+            }
+
+            return response;
         }
 
         public async Task<BaseResponse<OrderDetailResponseModel>> GetOrderDetailByIdAsync(int orderDetailId)

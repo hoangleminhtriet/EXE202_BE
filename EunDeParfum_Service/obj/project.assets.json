@@ -753,6 +753,22 @@
           }
         }
       },
+      "payOS/1.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/net6.0/payos-lib-backend-dotnet.dll": {
+            "related": ".runtimeconfig.json"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/payos-lib-backend-dotnet.dll": {
+            "related": ".runtimeconfig.json"
+          }
+        }
+      },
       "QRCoder/1.5.0": {
         "type": "package",
         "compile": {
@@ -2347,6 +2363,20 @@
         "packageIcon.png"
       ]
     },
+    "payOS/1.0.9": {
+      "sha512": "LPfIWXg0Oo8mPk8l3otrqtH4iQcjaG+ughDp2DS3gS52s7bs8eEtU+uXflu32GPDCFKksfFyAAOLUoPDva4/Gw==",
+      "type": "package",
+      "path": "payos/1.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/payos-lib-backend-dotnet.dll",
+        "lib/net6.0/payos-lib-backend-dotnet.runtimeconfig.json",
+        "payos.1.0.9.nupkg.sha512",
+        "payos.nuspec"
+      ]
+    },
     "QRCoder/1.5.0": {
       "sha512": "z1xaJ1BsYdSstpuKWgT3ND9Ryt7gd9RdBvcLemP3Dz8CrPPeuyhn2KlD8J1x1V4OhuAsAFcZRmxB7vte7CQkfQ==",
       "type": "package",
@@ -3793,6 +3823,7 @@
       "Microsoft.EntityFrameworkCore >= 6.0.36",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.36",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.36",
+      "PayOS >= 1.0.9",
       "QRCoder >= 1.5.0",
       "System.Security.Claims >= 4.3.0",
       "X.PagedList >= 10.2.1"
@@ -3871,6 +3902,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.36, )"
+          },
+          "PayOS": {
+            "target": "Package",
+            "version": "[1.0.9, )"
           },
           "QRCoder": {
             "target": "Package",

@@ -77,6 +77,22 @@ namespace EXE201_EunDeParfum.Controllers
 
             return StatusCode(result.Code, result);
         }
+        [HttpPut("update-status/{orderId}")]
+        public async Task<IActionResult> UpdateOrderStatus(int orderId, [FromBody] string newStatus)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = await _oderService.UpdateOrderStatusAsync(orderId, newStatus);
+            if (!result.Success)
+            {
+                return StatusCode(result.Code, result);
+            }
+
+            return StatusCode(result.Code, result);
+        }
         [HttpDelete("{orderId}")]
         public async Task<IActionResult> DeleteOrder(int orderId, [FromQuery] bool status = true)
         {
@@ -141,6 +157,28 @@ namespace EXE201_EunDeParfum.Controllers
             }
 
             return StatusCode(result.Code, result);
+        }
+        [HttpGet("GeneratePaymentLink/{orderId}")]
+        public async Task<IActionResult> GeneratePaymentLink(int orderId)
+        {
+            try
+            {
+                var paymentLink = await _oderService.GeneratePaymentLinkForOrderAsync(orderId);
+                return Ok(new
+                {
+                    Success = true,
+                    Message = "Generate payment link successfully.",
+                    PaymentUrl = paymentLink
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    Success = false,
+                    Message = $"Server error: {ex.Message}"
+                });
+            }
         }
     }
 }

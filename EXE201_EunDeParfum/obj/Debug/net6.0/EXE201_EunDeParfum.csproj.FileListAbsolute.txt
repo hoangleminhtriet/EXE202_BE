@@ -593,3 +593,4 @@ E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Debug\net6.0\refint\EXE201_EunDeParfum.d
 E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Debug\net6.0\EXE201_EunDeParfum.pdb
 E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Debug\net6.0\EXE201_EunDeParfum.genruntimeconfig.cache
 E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Debug\net6.0\ref\EXE201_EunDeParfum.dll
+E:\Git\EXE202_BE\EXE201_EunDeParfum\bin\Debug\net6.0\payos-lib-backend-dotnet.dll

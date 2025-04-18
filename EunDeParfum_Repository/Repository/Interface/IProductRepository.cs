@@ -13,6 +13,7 @@ namespace EunDeParfum_Repository.Repository.Interface
         Task<bool> UpdateProductAsync(Product product);
         Task<bool> DeleteProductAsync(int productId);
         Task<Product> GetProductByIdAsync(int id);
+        Task<List<Product>> GetProductsByIdsAsync(List<int> productIds);
         Task<List<Product>> GetAllProductAsync();
         Task<List<Product>> GetProductsByCategoryId(int categoryId);
     }

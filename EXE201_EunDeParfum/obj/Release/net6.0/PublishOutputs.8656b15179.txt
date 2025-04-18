@@ -38,6 +38,7 @@ E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Release\net6.0\PubTmp\Out\Microsoft.Iden
 E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
 E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Release\net6.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
 E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
+E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Release\net6.0\PubTmp\Out\payos-lib-backend-dotnet.dll
 E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Release\net6.0\PubTmp\Out\QRCoder.dll
 E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Release\net6.0\PubTmp\Out\Stripe.net.dll
 E:\Git\EXE202_BE\EXE201_EunDeParfum\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
